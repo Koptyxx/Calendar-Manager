@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="container">
+    <div class="text-center">
+        <img src="./images/friday.png" alt="logo" width="250" height="150">
+    </div>
+    <!-- navs -->
+    <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a
+            class="nav-link active"
+            id="tab-login"
+            href="#"
+            role="tab"
+            aria-selected="true"
+            >Login</a
+            >
+        </li>
+        <li class="nav-item" role="presentation">
+            <a
+            class="nav-link"
+            id="tab-register"
+            href="./FridayRegistration.html"
+            role="tab"
+            aria-selected="false"
+            >Register</a
+            >
+        </li>
+    </ul>
+        <div class="tab-content">
+            <form>
+            <!-- Email input -->
+            <div class="form-outline mb-4 text-center">
+                <label class="form-label" for="loginName">Username</label>
+                <input type="text" id="loginName" class="form-control" placeholder="Username"/>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4 text-center">
+                <label class="form-label" for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" class="form-control" placeholder="Password"/>
+                <input type="checkbox" id="showPassword" onclick="Toggle()">
+                <label for="showPassword">Show Password</label>
+                <script>
+                    function Toggle(){
+                        var tmp = document.getElementById("loginPassword");
+                        if(tmp.type === "password"){
+                            tmp.type = "text";
+                        }
+                        else{
+                            tmp.type = "password";
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
