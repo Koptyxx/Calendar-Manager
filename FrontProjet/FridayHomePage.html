@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="https://unpkg.com/vue@next"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -35,31 +36,19 @@
             >
         </li>
     </ul>
-        <div class="tab-content">
+        <div class="tab-content" id="Login">
             <form>
-            <!-- Email input -->
+            <!-- Username input -->
             <div class="form-outline mb-4 text-center">
                 <label class="form-label" for="loginName">Username</label>
-                <input type="text" id="loginName" class="form-control" placeholder="Username"/>
+                <input type="text" id="loginName" class="form-control" placeholder="Username" v-model="username"/>
             </div>
-
             <!-- Password input -->
             <div class="form-outline mb-4 text-center">
-                <label class="form-label" for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" class="form-control" placeholder="Password"/>
-                <input type="checkbox" id="showPassword" onclick="Toggle()">
+                <label class="form-label">Password</label>
+                <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
+                <input type="checkbox" @click="showPassword">
                 <label for="showPassword">Show Password</label>
-                <script>
-                    function Toggle(){
-                        var tmp = document.getElementById("loginPassword");
-                        if(tmp.type === "password"){
-                            tmp.type = "text";
-                        }
-                        else{
-                            tmp.type = "password";
-                        }
-                    }
-                </script>
             </div>
 
             <!-- Submit button -->
@@ -69,5 +58,6 @@
             </form>
         </div>
     </div>
+    <script src="./Login.js"></script>
 </body>
 </html>

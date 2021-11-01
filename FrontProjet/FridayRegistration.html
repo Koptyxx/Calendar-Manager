@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <script src="https://unpkg.com/vue@next"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -35,31 +36,39 @@
       >
     </li>
   </ul>
-      <form>
-        <!-- Username input -->
-        <div class="form-outline mb-4 text-center">
-          <label class="form-label" for="registerUsername">Username</label>
-          <input type="text" id="registerUsername" class="form-control" placeholder="Username" pattern="[A-Za-z]" title="Only letters are allowed for usernames"/>
-        </div>
-  
-        <!-- Password input -->
-        <div class="form-outline mb-4 text-center">
-          <label class="form-label" for="registerPassword">Password</label>
-          <input type="password" id="registerPassword" class="form-control" placeholder="Password"/>
-        </div>
-  
-        <!-- Repeat Password input -->
-        <div class="form-outline mb-4 text-center">
-          <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-          <input type="password" id="registerRepeatPassword" class="form-control" placeholder="Password"/>
-        </div>
-  
-        <!-- Submit button -->
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
-        </div>
-      </form>
+      <div class="tab-content" id="Registration">
+        <p v-if="passwords_error">Passwords aren't the same, try again please !</p>
+        <form @submit="testPasswords" action="#">
+          <!-- Username input -->
+          <div class="form-outline mb-4 text-center">
+            <label class="form-label" for="registerUsername">Username</label>
+            <input type="text" id="registerUsername" class="form-control" placeholder="Username" title="Only letters are allowed for usernames" v-model="username"/>
+          </div>
+    
+          <!-- Password input -->
+          <div class="form-outline mb-4 text-center">
+            <label class="form-label" for="registerPassword">Password</label>
+            <input :type="passwordFieldType" id="registerPassword" class="form-control" placeholder="Password" v-model="password"/>
+            <input type="checkbox" @click="showPassword">
+            <label for="showPassword">Show Password</label>
+          </div>
+    
+          <!-- Repeat Password input -->
+          <div class="form-outline mb-4 text-center">
+            <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+            <input :type="confirmed_passwordFieldType" id="registerRepeatPassword" class="form-control" placeholder="Password" v-model="confirmed_password"/>
+            <input type="checkbox" @click="showConfirmedPassword">
+            <label for="showConfirmedPassword">Show Confirmed Password</label>
+          </div>
+    
+          <!-- Submit button -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
+  <script src="./Registration.js"></script>
 </body>
 </html>
