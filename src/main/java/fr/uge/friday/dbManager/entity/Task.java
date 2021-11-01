@@ -1,4 +1,4 @@
-package fr.uge.friday.dbManager;
+package fr.uge.friday.dbManager.entity;
 
 import javax.persistence.*;
 import java.util.Date;

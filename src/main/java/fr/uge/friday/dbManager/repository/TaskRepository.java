@@ -1,5 +1,6 @@
-package fr.uge.friday.dbManager;
+package fr.uge.friday.dbManager.repository;
 
+import fr.uge.friday.dbManager.entity.Task;
 import org.springframework.data.repository.CrudRepository;
 import java.util.Date;
 import java.util.List;
