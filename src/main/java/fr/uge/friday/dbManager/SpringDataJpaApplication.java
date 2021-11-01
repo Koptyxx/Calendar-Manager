@@ -1,5 +1,9 @@
 package fr.uge.friday.dbManager;
 
+import fr.uge.friday.dbManager.entity.Task;
+import fr.uge.friday.dbManager.entity.User;
+import fr.uge.friday.dbManager.repository.TaskRepository;
+import fr.uge.friday.dbManager.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,8 +36,8 @@ public class SpringDataJpaApplication {
         repository.save(new User(name, password));
     }
 
-    private void insertTasks(TaskRepository repository, Date date, String desc){
-        repository.save(new Task(date, desc));
+    private void insertTasks(TaskRepository repository, Date date, String description){
+        repository.save(new Task(date, description));
     }
 
 }
