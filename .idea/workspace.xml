@@ -4,28 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="added spring boot web">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="spring web working">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1424c73-90cb-4a71-a322-93c6e6e7cc04.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1424c73-90cb-4a71-a322-93c6e6e7cc04.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Friday.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Friday.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/PagesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/SpringDataJpaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/entity/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/PagesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/SpringDataJpaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/SpringDataJpaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/TaskRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/pages/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/SpringDataJpaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dbManager/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/uge/friday/dbManager/FridayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/uge/friday/FridayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/SpringDataJpaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/controller/PageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/entity/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/repository/TaskRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dbManager/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/uge/friday/dbManager/FridayApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="jpb.entityDeclaration" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -118,21 +117,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="Friday" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.uge.friday.dbManager.*" />
+          <option name="PATTERN" value="fr.uge.friday.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.uge.friday.dbManager.SpringDataJpaApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.uge.friday.SpringDataJpaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Spring Boot.SpringDataJpaApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringDataJpaApplication" />
         <item itemvalue="Spring Boot.SpringDataJpaApplication" />
         <item itemvalue="Application.test" />
       </list>
@@ -154,7 +160,11 @@
       <workItem from="1635171007942" duration="7633000" />
       <workItem from="1635182353318" duration="712000" />
       <workItem from="1635774596031" duration="7082000" />
-      <workItem from="1635782701645" duration="4260000" />
+      <workItem from="1635782701645" duration="4658000" />
+      <workItem from="1636036799017" duration="2508000" />
+      <workItem from="1636039352267" duration="3070000" />
+      <workItem from="1636042903302" duration="426000" />
+      <workItem from="1636043339729" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -177,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635183062958</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spring web working">
+      <created>1635787496942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635787496943</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +308,8 @@
     </ignored-roots>
     <MESSAGE value="clean project" />
     <MESSAGE value="added spring boot web" />
-    <option name="LAST_COMMIT_MESSAGE" value="added spring boot web" />
+    <MESSAGE value="spring web working" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring web working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
