@@ -1,4 +1,4 @@
-package fr.uge.friday.dbManager.entity;
+package fr.uge.friday.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,16 +9,12 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
+    @Column(name = "date", nullable = false)
     private Date date;
+    @Column(name = "description", nullable = false)
     private String description;
-
-    public Task(Date date, String description) {
-        this.date = date;
-        this.description = description;
-    }
-
-    public Task(){
-    }
+    @Column(name = "location", nullable = false)
+    private String location;
 
     @Override
     public String toString() {
@@ -26,6 +22,17 @@ public class Task {
                 "id=" + id +
                 ", date=" + date +
                 ", description='" + description + '\'' +
+                ", location='" + location + '\'' +
                 '}';
     }
+
+    public Task(Date date, String description, String location) {
+        this.date = date;
+        this.description = description;
+        this.location = location;
+    }
+
+    public Task(){
+    }
+
 }

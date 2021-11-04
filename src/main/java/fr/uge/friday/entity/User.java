@@ -1,4 +1,6 @@
-package fr.uge.friday.dbManager.entity;
+package fr.uge.friday.entity;
+
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 
@@ -8,7 +10,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_user", nullable = false)
     private Long id_user;
+    @Column(name = "name", nullable = false)
     private String name;
+    @Column(name = "password", nullable = false)
     private String password;
 
 

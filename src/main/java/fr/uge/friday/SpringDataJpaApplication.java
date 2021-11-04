@@ -1,9 +1,9 @@
-package fr.uge.friday.dbManager;
+package fr.uge.friday;
 
-import fr.uge.friday.dbManager.entity.Task;
-import fr.uge.friday.dbManager.entity.User;
-import fr.uge.friday.dbManager.repository.TaskRepository;
-import fr.uge.friday.dbManager.repository.UserRepository;
+import fr.uge.friday.entity.Task;
+import fr.uge.friday.entity.User;
+import fr.uge.friday.repository.TaskRepository;
+import fr.uge.friday.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,14 +21,14 @@ public class SpringDataJpaApplication {
     @Bean
     public CommandLineRunner run(UserRepository userRepository, TaskRepository taskRepository){
         return (args -> {
+            userRepository.deleteAll();
+            taskRepository.deleteAll();
             insertUsers(userRepository, "Xhavit", "123");
-            System.out.println(userRepository.findAll());
             insertUsers(userRepository, "Samy", "456");
             System.out.println(userRepository.findAllByNameEquals("Samy"));
-            System.out.println(userRepository.findUsersByPasswordEquals(""));
-            System.out.println(userRepository.findAll());
-            insertTasks(taskRepository, new Date(), "faire les courses");
+            insertTasks(taskRepository, new Date(), "faire les courses", "Leclerc de Meaux");
             System.out.println(taskRepository.findAll());
+            System.out.println(userRepository.findAll());
         });
     }
 
@@ -36,8 +36,8 @@ public class SpringDataJpaApplication {
         repository.save(new User(name, password));
     }
 
-    private void insertTasks(TaskRepository repository, Date date, String description){
-        repository.save(new Task(date, description));
+    private void insertTasks(TaskRepository repository, Date date, String description, String location){
+        repository.save(new Task(date, description, location));
     }
 
 }

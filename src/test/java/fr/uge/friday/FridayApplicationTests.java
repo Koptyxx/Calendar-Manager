@@ -1,4 +1,4 @@
-package fr.uge.friday.dbManager;
+package fr.uge.friday;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

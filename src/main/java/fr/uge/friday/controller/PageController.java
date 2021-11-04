@@ -1,4 +1,4 @@
-package fr.uge.friday.dbManager.controller;
+package fr.uge.friday.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
