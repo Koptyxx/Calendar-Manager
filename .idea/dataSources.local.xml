@@ -16,5 +16,10 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="Friday/Hibernate" uuid="6dbafe8e-eed1-4aaa-8682-be43e22a36bd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="HSQLDB" exact-version="0" />
+      <user-name>fridayDB</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

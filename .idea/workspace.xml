@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="some db modification">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Friday.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Friday.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/SpringDataJpaApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/PageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/SpringDataJpaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/SpringDataJpaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/uge/friday/FridayApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/uge/friday/FridayApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +80,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
@@ -95,7 +100,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringDataJpaApplication">
+  <component name="RunManager" selected="Application.CalendarManager">
+    <configuration name="CalendarManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.CalendarManager" />
+      <module name="Friday" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.uge.friday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.uge.friday.dbManager.test" />
       <module name="Friday" />
@@ -126,10 +144,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.test" />
+      <item itemvalue="Application.CalendarManager" />
       <item itemvalue="Spring Boot.SpringDataJpaApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CalendarManager" />
         <item itemvalue="Spring Boot.SpringDataJpaApplication" />
         <item itemvalue="Spring Boot.SpringDataJpaApplication" />
         <item itemvalue="Application.test" />
@@ -158,6 +178,8 @@
       <workItem from="1636042903302" duration="426000" />
       <workItem from="1636043339729" duration="772000" />
       <workItem from="1636135469768" duration="772000" />
+      <workItem from="1636293423251" duration="581000" />
+      <workItem from="1636322147345" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
