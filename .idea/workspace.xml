@@ -4,24 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="some db modification">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Testing ical4j lib">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1424c73-90cb-4a71-a322-93c6e6e7cc04.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c1424c73-90cb-4a71-a322-93c6e6e7cc04.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Friday.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Friday.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/CalendarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/CalendarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/SpringDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/SpringDataJpaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/CalendarManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/CalendarManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/SpringDataJpaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/SpringDataJpaApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/uge/friday/FridayApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/uge/friday/FridayApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +62,7 @@
   </component>
   <component name="ProjectId" id="1zubEw8YNOs7Qfg337aDZb91nlv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -74,15 +80,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Téléchargements/ical4j-4.0.0-alpha9.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/helloworld" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +108,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CalendarManager">
+  <component name="RunManager" selected="Spring Boot.SpringDataJpaApplication">
     <configuration name="CalendarManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.uge.friday.CalendarManager" />
       <module name="Friday" />
@@ -127,6 +135,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="SpringDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="Friday" />
       <extension name="coverage">
@@ -142,17 +153,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/src/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.test" />
       <item itemvalue="Application.CalendarManager" />
+      <item itemvalue="HTTP Request.generated-requests#1" />
+      <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.SpringDataJpaApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringDataJpaApplication" />
+        <item itemvalue="HTTP Request.generated-requests#1" />
+        <item itemvalue="npm.serve" />
         <item itemvalue="Application.CalendarManager" />
         <item itemvalue="Spring Boot.SpringDataJpaApplication" />
-        <item itemvalue="Spring Boot.SpringDataJpaApplication" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +203,19 @@
       <workItem from="1636043339729" duration="772000" />
       <workItem from="1636135469768" duration="772000" />
       <workItem from="1636293423251" duration="581000" />
-      <workItem from="1636322147345" duration="2058000" />
+      <workItem from="1636322147345" duration="2386000" />
+      <workItem from="1636395267921" duration="1762000" />
+      <workItem from="1636397700392" duration="409000" />
+      <workItem from="1636404862425" duration="498000" />
+      <workItem from="1636405426717" duration="93000" />
+      <workItem from="1636405611314" duration="23000" />
+      <workItem from="1636405833817" duration="1407000" />
+      <workItem from="1636463415506" duration="6239000" />
+      <workItem from="1636471854029" duration="2812000" />
+      <workItem from="1636636557388" duration="584000" />
+      <workItem from="1636641357241" duration="2814000" />
+      <workItem from="1636811640577" duration="4123000" />
+      <workItem from="1636816688009" duration="1916000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -216,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636043876841</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Testing ical4j lib">
+      <created>1636324510435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636324510435</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +375,8 @@
     <MESSAGE value="added spring boot web" />
     <MESSAGE value="spring web working" />
     <MESSAGE value="some db modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="some db modification" />
+    <MESSAGE value="Testing ical4j lib" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing ical4j lib" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

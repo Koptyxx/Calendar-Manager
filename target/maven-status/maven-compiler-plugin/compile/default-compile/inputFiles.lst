@@ -1,6 +1,8 @@
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/Controller.java
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/Task.java
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/TaskRepository.java
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/SpringDataJpaApplication.java
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/User.java
-/home/xhavit/Documents/M1/JAVA/Friday/src/main/java/fr/uge/friday/dbManager/UserRepository.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\repository\TaskRepository.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\SpringDataJpaApplication.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\repository\UserRepository.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\controller\PageController.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\entity\User.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\controller\MessageController.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\entity\Task.java
+D:\ghamri-osaj\src\main\java\fr\uge\friday\CalendarManager.java

@@ -8,17 +8,20 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+@RestController
 @SpringBootApplication
 public class SpringDataJpaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringDataJpaApplication.class, args);
     }
-
-    @Bean
+    /*@Bean
     public CommandLineRunner run(UserRepository userRepository, TaskRepository taskRepository){
         return (args -> {
             userRepository.deleteAll();
@@ -31,13 +34,18 @@ public class SpringDataJpaApplication {
             System.out.println(userRepository.findAll());
         });
     }
-
+ 
     private void insertUsers(UserRepository repository, String name, String password){
         repository.save(new User(name, password));
     }
 
     private void insertTasks(TaskRepository repository, Date date, String description, String location){
         repository.save(new Task(date, description, location));
-    }
+    }*/
+
+    /*@PostMapping("/form")
+    public String formSubmitted(@RequestParam("form") String f) {
+        return String.format("Text %s uploaded successfully", f);
+    }*/
 
 }
