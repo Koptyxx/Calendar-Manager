@@ -1,8 +1,8 @@
-fr\uge\friday\CalendarManager.class
-fr\uge\friday\entity\User.class
-fr\uge\friday\repository\TaskRepository.class
-fr\uge\friday\controller\PageController.class
-fr\uge\friday\controller\MessageController.class
-fr\uge\friday\repository\UserRepository.class
-fr\uge\friday\SpringDataJpaApplication.class
-fr\uge\friday\entity\Task.class
+fr/uge/friday/controller/FridayController.class
+fr/uge/friday/jsonparsing/JsonFunc.class
+fr/uge/friday/FridayApplication.class
+fr/uge/friday/repository/TaskRepository.class
+fr/uge/friday/entity/Task.class
+fr/uge/friday/CalendarManager.class
+fr/uge/friday/repository/UserRepository.class
+fr/uge/friday/entity/User.class

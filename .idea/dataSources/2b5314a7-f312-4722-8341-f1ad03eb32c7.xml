@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="fridayDB">
+  <database-model serializer="dbm" dbms="HSQLDB" family-id="HSQLDB" format-version="4.23">
+    <root id="1">
+      <ServerVersion>2.6.0</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="PUBLIC">
+      <Current>1</Current>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="2" name="SYSTEM_LOBS"/>
+    <table id="6" parent="4" name="TASKS"/>
+    <table id="7" parent="4" name="USERNTASK"/>
+    <table id="8" parent="4" name="USERS"/>
+    <column id="9" parent="6" name="TASK_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="10" parent="6" name="DATE">
+      <Position>2</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="11" parent="6" name="DESCRIPTION">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="6" name="LOCATION">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="13" parent="6" name="SYS_IDX_SYS_PK_10095_10096">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="14" parent="6" name="SYS_PK_10095">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="15" parent="7" name="USER_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <column id="16" parent="7" name="TASK_ID">
+      <Position>2</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="17" parent="7" name="SYS_IDX_SYS_PK_10102_10103">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="18" parent="7" name="SYS_IDX_FKG6T837B4PHF0FJMRV7M3HFQC5_10114">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <index id="19" parent="7" name="SYS_IDX_FKIGKTJKIM9J2JI8PXWI3V2YIUC_10117">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+    </index>
+    <key id="20" parent="7" name="SYS_PK_10102">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TASK_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="21" parent="7" name="FKG6T837B4PHF0FJMRV7M3HFQC5">
+      <ColNames>USER_ID</ColNames>
+      <RefTableName>USERS</RefTableName>
+      <RefKeyName>SYS_PK_10108</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <foreign-key id="22" parent="7" name="FKIGKTJKIM9J2JI8PXWI3V2YIUC">
+      <ColNames>TASK_ID</ColNames>
+      <RefTableName>TASKS</RefTableName>
+      <RefKeyName>SYS_PK_10095</RefKeyName>
+      <RefColNames>TASK_ID</RefColNames>
+    </foreign-key>
+    <column id="23" parent="8" name="ID_USER">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="8" name="PASSWORD">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="8" name="USERNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="26" parent="8" name="SYS_IDX_SYS_PK_10108_10109">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_USER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="8" name="SYS_PK_10108">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

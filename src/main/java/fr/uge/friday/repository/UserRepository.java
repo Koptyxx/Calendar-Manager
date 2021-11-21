@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, String> {
-    List<User> findAllByNameEquals(String str);
-    User findUserByNameEquals(String str);
+    List<User> findAllByUsernameEquals(String str);
+    User findUserByUsernameEquals(String str);
 
     @Transactional
-    long deleteUserByName(String name);
+    long deleteUserByUsername(String name);
 }

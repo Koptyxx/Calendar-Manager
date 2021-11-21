@@ -5,18 +5,13 @@ import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.data.ParserException;
 import net.fortuna.ical4j.data.UnfoldingReader;
 import net.fortuna.ical4j.model.Calendar;
-import net.fortuna.ical4j.model.Date;
-import net.fortuna.ical4j.model.TimeZone;
-import net.fortuna.ical4j.model.component.VEvent;
 import net.fortuna.ical4j.model.property.CalScale;
 import net.fortuna.ical4j.model.property.ProdId;
 import net.fortuna.ical4j.model.property.Version;
 import net.fortuna.ical4j.util.MapTimeZoneCache;
-import org.aspectj.weaver.Utils;
 
-
-import java.io.*;
-import java.util.GregorianCalendar;
+import java.io.FileReader;
+import java.io.IOException;
 
 
 public class CalendarManager {

@@ -1,8 +1,8 @@
-D:\ghamri-osaj\src\main\java\fr\uge\friday\repository\TaskRepository.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\SpringDataJpaApplication.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\repository\UserRepository.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\controller\PageController.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\entity\User.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\controller\MessageController.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\entity\Task.java
-D:\ghamri-osaj\src\main\java\fr\uge\friday\CalendarManager.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/CalendarManager.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/repository/TaskRepository.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/entity/User.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/FridayApplication.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/entity/Task.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/repository/UserRepository.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/controller/FridayController.java
