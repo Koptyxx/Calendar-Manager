@@ -35,12 +35,12 @@
       <DataType>VARCHAR(255)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="13" parent="6" name="SYS_IDX_SYS_PK_10095_10096">
+    <index id="13" parent="6" name="SYS_IDX_SYS_PK_10092_10096">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TASK_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="14" parent="6" name="SYS_PK_10095">
+    <key id="14" parent="6" name="SYS_PK_10092">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TASK_ID</ColNames>
       <Primary>1</Primary>
@@ -59,11 +59,11 @@
       <ColNames>TASK_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="18" parent="7" name="SYS_IDX_FKG6T837B4PHF0FJMRV7M3HFQC5_10114">
+    <index id="18" parent="7" name="SYS_IDX_FKG6T837B4PHF0FJMRV7M3HFQC5_10117">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USER_ID</ColNames>
     </index>
-    <index id="19" parent="7" name="SYS_IDX_FKIGKTJKIM9J2JI8PXWI3V2YIUC_10117">
+    <index id="19" parent="7" name="SYS_IDX_FKIGKTJKIM9J2JI8PXWI3V2YIUC_10105">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>TASK_ID</ColNames>
     </index>
@@ -81,7 +81,7 @@
     <foreign-key id="22" parent="7" name="FKIGKTJKIM9J2JI8PXWI3V2YIUC">
       <ColNames>TASK_ID</ColNames>
       <RefTableName>TASKS</RefTableName>
-      <RefKeyName>SYS_PK_10095</RefKeyName>
+      <RefKeyName>SYS_PK_10092</RefKeyName>
       <RefColNames>TASK_ID</RefColNames>
     </foreign-key>
     <column id="23" parent="8" name="ID_USER">
@@ -99,15 +99,24 @@
       <DataType>VARCHAR(255)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="26" parent="8" name="SYS_IDX_SYS_PK_10108_10109">
+    <index id="26" parent="8" name="SYS_IDX_SYS_PK_10108_10111">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID_USER</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="27" parent="8" name="SYS_PK_10108">
+    <index id="27" parent="8" name="SYS_IDX_UK_R43AF9AP4EDM43MMTQ01ODDJ6_10115">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USERNAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="8" name="SYS_PK_10108">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID_USER</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="29" parent="8" name="SYS_IDX_UK_R43AF9AP4EDM43MMTQ01ODDJ6_10115">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USERNAME</ColNames>
     </key>
   </database-model>
 </dataSource>

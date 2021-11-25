@@ -1,5 +1,6 @@
 fr/uge/friday/controller/FridayController.class
 fr/uge/friday/jsonparsing/JsonFunc.class
+fr/uge/friday/Insertions.class
 fr/uge/friday/FridayApplication.class
 fr/uge/friday/repository/TaskRepository.class
 fr/uge/friday/entity/Task.class

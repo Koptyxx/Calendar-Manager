@@ -3,12 +3,14 @@ package fr.uge.friday.entity;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity(name = "Tasks")
+@Entity
+@Table(name = "Tasks")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "task_id", nullable = false)
     private Long task_id;
+
     @Column(name = "date", nullable = false)
     private Date date;
     @Column(name = "description", nullable = false)
@@ -43,4 +45,23 @@ public class Task {
                 '}';
     }
 
+    public Long getTask_id() {
+        return task_id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

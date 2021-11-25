@@ -2,7 +2,8 @@ package fr.uge.friday.entity;
 
 import javax.persistence.*;
 
-@Entity(name = "Users")
+@Entity
+@Table(name = "Users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
