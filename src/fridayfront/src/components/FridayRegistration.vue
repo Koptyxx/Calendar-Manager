@@ -1,6 +1,4 @@
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,71 +7,75 @@
 
   </head>
   <body class="container">
-  <div class="text-center">
-    <img src="../assets/friday.png" alt="logo" width="250" height="150">
-  </div>
-  <!-- navs -->
+
   <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
     <li class="nav-item" role="presentation">
-      <a
-          class="nav-link"
-          id="tab-login"
-          href="./FridayLogin.vue"
-          role="tab"
-          aria-selected="false"
-      >Login</a
-      >
+      <router-link to="/login">
+        <a
+            class="nav-link"
+            id="tab-login"
+            role="tab"
+            aria-selected="false"
+        >Login
+        </a>
+      </router-link>
     </li>
     <li class="nav-item" role="presentation">
-      <a
-          class="nav-link active"
-          id="tab-register"
-          href="#"
-          role="tab"
-          aria-selected="true"
-      >Register</a
-      >
+      <router-link to="/register">
+        <a class="nav-link active"
+            id="tab-register"
+            href="#"
+            role="tab"
+            aria-selected="true"
+        >Register
+        </a>
+      </router-link>
     </li>
   </ul>
-  <div class="tab-content" id="Registration">
-    <p v-if="passwords_error">Passwords aren't the same, try again please !</p>
-    <form @submit="testPasswords" action="#">
-      <!-- Username input -->
-      <div class="form-outline mb-4 text-center">
-        <label class="form-label" for="registerUsername">Username</label>
-        <input type="text" id="registerUsername" class="form-control" placeholder="Username" title="Only letters are allowed for usernames" v-model="username"/>
-      </div>
 
-      <!-- Password input -->
-      <div class="form-outline mb-4 text-center">
-        <label class="form-label" for="registerPassword">Password</label>
-        <input :type="passwordFieldType" id="registerPassword" class="form-control" placeholder="Password" v-model="password"/>
-        <input type="checkbox" @click="showPassword">
-        <label for="showPassword">Show Password</label>
-      </div>
+  <div id='login'>
+      <p v-if="passwords_error">Passwords aren't the same, try again please !</p>
+      <form
+          action="./Test.vue"
+          @submit="testPasswords"
+      >
 
-      <!-- Repeat Password input -->
-      <div class="form-outline mb-4 text-center">
-        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-        <input :type="confirmed_passwordFieldType" id="registerRepeatPassword" class="form-control" placeholder="Password" v-model="confirmed_password"/>
-        <input type="checkbox" @click="showConfirmedPassword">
-        <label for="showConfirmedPassword">Show Confirmed Password</label>
-      </div>
+          <div class="form-outline mb-4 text-center">
+              <label class="form-label" for="username">Username</label>
+              <input type="text" id="username" class="form-control" placeholder="Username" v-model="username"/>
+          </div>
+          <!-- Password input -->
+          <div class="form-outline mb-4 text-center">
+              <label class="form-label">Password</label>
+              <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
+              <input type="checkbox" @click="showPassword">
+              <label>Show Password</label>
+          </div>
 
-      <!-- Submit button -->
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
-      </div>
-    </form>
+          <div class="form-outline mb-4 text-center">
+              <label class="form-label">Repeat password</label>
+              <input :type="confirmed_passwordFieldType" class="form-control" placeholder="Enter your password again please" v-model="confirmed_password"/>
+              <input type="checkbox" @click="showPassword">
+              <label>Show Password</label>
+          </div>
+
+          <div>
+              <!--<router-link to="/test" v-if="!testPasswords"></router-link>-->
+              <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+          </div>
+
+
+
+      </form>
+
+
   </div>
   </body>
-  </html>
-
 </template>
 
 <script>
-const {createApp} = require("vue");
-createApp({
+
+export default {
   data(){
     return {
       username: null,
@@ -95,9 +97,15 @@ createApp({
 
     testPasswords(){
       this.passwords_error = this.confirmed_password !== this.password;
+      console.log(this.password + " = " + this.confirmed_password)
+      console.log("Are they the same passwords : " + this.passwords_error)
     }
+
+
   }
-}).mount("#Registration");
+};
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

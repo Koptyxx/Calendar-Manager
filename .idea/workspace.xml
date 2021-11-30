@@ -4,47 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="VueJS+Spring+Maven=Family (and some db changes)">
-      <change afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b5314a7-f312-4722-8341-f1ad03eb32c7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b5314a7-f312-4722-8341-f1ad03eb32c7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/MessageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/SpringDataJpaApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/db.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="router, homepages...">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Friday.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Friday.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontProjet/FridayHomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontProjet/FridayHomePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontProjet/FridayRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontProjet/FridayRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontProjet/images/friday.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/assets/friday.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.6d148c31.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/logo.82b9c7a5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.a301f542.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.e3c28824.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.e3c28824.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.4386d774.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.4386d774.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.2005cd61.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.2005cd61.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.9a21e759.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.9a21e759.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
@@ -71,6 +58,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -102,8 +97,10 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -157,6 +154,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JsonFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.jsonparsing.JsonFunc" />
+      <module name="Friday" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.uge.friday.jsonparsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lecodedubg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.uge.friday.lecodedubg" />
       <module name="Friday" />
@@ -189,30 +199,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/src/frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="serve" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.CalendarManager" />
       <item itemvalue="Application.lecodedubg" />
+      <item itemvalue="Application.JsonFunc" />
+      <item itemvalue="Application.CalendarManager" />
       <item itemvalue="HTTP Request.generated-requests#1" />
-      <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.FridayApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FridayApplication" />
+        <item itemvalue="Application.CalendarManager" />
+        <item itemvalue="Application.JsonFunc" />
         <item itemvalue="Application.lecodedubg" />
         <item itemvalue="HTTP Request.generated-requests#1" />
-        <item itemvalue="npm.serve" />
-        <item itemvalue="Application.CalendarManager" />
       </list>
     </recent_temporary>
   </component>
@@ -269,6 +269,14 @@
       <workItem from="1637588524322" duration="5339000" />
       <workItem from="1637679138142" duration="921000" />
       <workItem from="1637742653476" duration="3279000" />
+      <workItem from="1637845809054" duration="394000" />
+      <workItem from="1638113033629" duration="4397000" />
+      <workItem from="1638117453437" duration="9515000" />
+      <workItem from="1638193939204" duration="7090000" />
+      <workItem from="1638203408261" duration="13000" />
+      <workItem from="1638220458738" duration="1550000" />
+      <workItem from="1638277398565" duration="145000" />
+      <workItem from="1638280955947" duration="7344000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -319,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637512760480</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="router, homepages...">
+      <created>1637845910759</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637845910759</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +464,8 @@
     <MESSAGE value="some db modification" />
     <MESSAGE value="Testing ical4j lib" />
     <MESSAGE value="VueJS+Spring+Maven=Family (and some db changes)" />
-    <option name="LAST_COMMIT_MESSAGE" value="VueJS+Spring+Maven=Family (and some db changes)" />
+    <MESSAGE value="router, homepages..." />
+    <option name="LAST_COMMIT_MESSAGE" value="router, homepages..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

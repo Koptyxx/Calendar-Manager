@@ -1,83 +1,98 @@
 <template>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
 
-  </head>
+    </head>
+
   <body class="container">
-  <div class="text-center">
-    <img src="../assets/friday.png" alt="logo" width="250" height="150">
-  </div>
-  <!-- navs -->
-  <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a
-          class="nav-link active"
-          id="tab-login"
-          href="#"
-          role="tab"
-          aria-selected="true"
-      >Login</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a
-          class="nav-link"
-          id="tab-register"
-          href="./FridayRegistration.vue"
-          role="tab"
-          aria-selected="false"
-      >Register</a>
-    </li>
+
+
+  <ul class="nav nav-pills nav-justified mb-3">
+      <li class="nav-item" role="presentation">
+          <router-link to="/login" aria-colcount="blue">
+              <a
+                  class="nav-link active"
+                  id="tab-login"
+                  href="#"
+                  role="tab"
+                  aria-selected="true"
+              >Login</a
+              >
+
+
+          </router-link>
+
+      </li>
+      <li class="nav-item" role="presentation">
+          <router-link to="/register">
+
+              <a
+                  class="nav-link"
+                  id="tab-register"
+                  role="tab"
+                  aria-selected="false"
+              >Register</a
+              >
+          </router-link>
+
+
+      </li>
   </ul>
-  <div class="tab-content" id="Login">
-    <form>
-      <!-- Username input -->
-      <div class="form-outline mb-4 text-center">
-        <label class="form-label" for="loginName">Username</label>
-        <input type="text" id="loginName" class="form-control" placeholder="Username" v-model="username"/>
-      </div>
-      <!-- Password input -->
-      <div class="form-outline mb-4 text-center">
-        <label class="form-label">Password</label>
-        <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
-        <input type="checkbox" @click="showPassword">
-        <label for="showPassword">Show Password</label>
-      </div>
+      <div id='login'>
+          <form
+            action="#"
+          >
+
+              <div class="form-outline mb-4 text-center">
+                  <label class="form-label" for="username">Username</label>
+                  <input type="text" id="username" class="form-control" placeholder="Username" v-model="username"/>
+              </div>
+              <!-- Password input -->
+              <div class="form-outline mb-4 text-center">
+                  <label class="form-label">Password</label>
+                  <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
+                  <input type="checkbox" @click="showPassword">
+                  <label>Show Password</label>
+              </div>
+
+              <div>
+                  <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+              </div>
 
 
-      <!-- Submit button -->
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+          </form>
+
+
       </div>
-    </form>
-  </div>
   </body>
-  </html>
 
 </template>
 
 <script>
-const {createApp} = require("vue");
-createApp({
-  data(){
-    return {
-      username: "",
-      password: "",
-      passwordFieldType : "password"
-    }
-  },
-  methods:{
 
-    showPassword(){
-      this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
+  export default {
+      data(){
+      return{
+          username: '',
+          password: '',
+          passwordFieldType : "password"
+      }
+    },
+    
+    methods:{
+      showPassword(){
+          this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password"
+      }
     }
+
+
   }
-}).mount("#Login");
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
