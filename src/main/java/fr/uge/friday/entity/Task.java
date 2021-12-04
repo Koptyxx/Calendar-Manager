@@ -2,14 +2,15 @@ package fr.uge.friday.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "Tasks")
 public class Task {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     @Column(name = "task_id", nullable = false)
-    private Long task_id;
+    private UUID task_id;
 
     @Column(name = "date", nullable = false)
     private Date date;
@@ -43,10 +44,6 @@ public class Task {
                 ", description='" + description + '\'' +
                 ", location='" + location + '\'' +
                 '}';
-    }
-
-    public Long getTask_id() {
-        return task_id;
     }
 
     public Date getDate() {

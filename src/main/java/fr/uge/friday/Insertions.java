@@ -9,11 +9,11 @@ import java.util.Date;
 
 public class Insertions {
 
-    static void insertUsers(UserRepository repository, String name, String password){
+    public static void insertUsers(UserRepository repository, String name, String password){
         repository.save(new User(name, password));
     }
 
-    static void insertTasks(UserRepository userRepository, TaskRepository repository, Date date, String description, String location, String username){
+    public static void insertTasks(UserRepository userRepository, TaskRepository repository, Date date, String description, String location, String username){
 
         var user = userRepository.findUserByUsernameEquals(username);
         repository.save(new Task(date, description, location, user));
