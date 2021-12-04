@@ -25,14 +25,14 @@ public class JsonFunc {
     public static void addUserWithJsonFile(UserRepository userRepository, String src) throws IOException {
         for(JsonNode root : parse(src)){
 
-            var getResult = root.get("user");
-            var userPath = root.path("user");
+            var getUsername = root.get("username");
+            var getPass = root.get("password");
             String username;
             String password;
 
-            if(getResult != null){
-                username = userPath.path("username").asText();
-                password = userPath.path("password").asText();
+            if(getUsername != null && getPass != null){
+                username = root.path("username").asText();
+                password = root.path("password").asText();
                 userRepository.save(new User(username, password));
             }
         }
@@ -41,20 +41,21 @@ public class JsonFunc {
     public static void addTaskWithJsonFile(UserRepository userRepository, TaskRepository taskRepository, String src) throws IOException {
         for(JsonNode root : parse(src)){
 
-            var getResult = root.get("task");
-            var taskPath = root.path("task");
+            var getDesc = root.get("description");
+            var getLoc = root.get("location");
+            var getUser = root.get("username");
             String description;
             String location;
             String username;
 
-            if(getResult != null){
-                description = taskPath.path("description").asText();
-                location = taskPath.path("location").asText();
-                username = taskPath.path("username").asText();
+            if(getDesc != null && getLoc != null && getUser != null){
+                description = root.path("description").asText();
+                location = root.path("location").asText();
+                username = root.path("username").asText();
                 var user = userRepository.findUserByUsernameEquals(username);
                 taskRepository.save(new Task(new Date(), description, location, user));
+                System.out.println(description + " " + location);
             }
-
         }
     }
 }
