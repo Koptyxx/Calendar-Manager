@@ -11,6 +11,7 @@
     <nav>
       <router-link to="/login">Login</router-link> |
       <router-link to="/register">register</router-link>
+      <router-link to="/calendar">calendar</router-link>
     </nav>
   </body>
   <router-view/>
