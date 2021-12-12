@@ -1,9 +1,14 @@
-/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/CalendarManager.java
-/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/converter/UserSaveConverter.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/repository/TaskRepository.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/entity/User.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/Insertions.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/dto/UserResponseDTO.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/CalendarManager.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/controller/UserController.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/dto/UserSaveDTO.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/FridayApplication.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/entity/Task.java
+/Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/converter/UserResponseConverter.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/repository/UserRepository.java
 /Users/xhavit/Documents/Java/ghamri-osaj/src/main/java/fr/uge/friday/controller/FridayController.java

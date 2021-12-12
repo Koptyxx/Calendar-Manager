@@ -43,8 +43,8 @@
     </ul>
         <div id='login'>
             <form
-                action="#"
-                @submit="addUser"
+                action=""
+                @submit="findUser"
             >
 
                 <div class="form-outline mb-4 text-center">
@@ -99,29 +99,21 @@
                 this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password"
             },
 
-            getUsername(){
-                console.log("get called", this.formData)
-            },
-
-            addUser(e){
-                e.preventDefault();
-                let user = {
-                    username: this.formData.username,
-                    password: this.formData.password
-                }
-                this.users.push(user)
-                document.forms[0].reset()
-
-                console.log("added")
-                let pre = document.querySelector('#msg pre');
-                pre.textContent = '\n' + JSON.stringify(this.users, '\t', 2);
-
-                localStorage.setItem('UserList', JSON.stringify(this.users) );
-
+            findUser(){
+                fetch('http://localhost:8080/user/find/' + this.formData.username, {
+                    method:'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: this.formData.username,
+                        password: this.formData.password
+                    })
+                })
+                .then(res => {return res.json()})
+                .then(data => console.log(data))
             }
         }
-
-
     }
 </script>
 
