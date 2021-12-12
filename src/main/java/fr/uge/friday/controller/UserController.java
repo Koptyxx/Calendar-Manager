@@ -9,7 +9,6 @@ import fr.uge.friday.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/user")
@@ -31,13 +30,24 @@ public class UserController {
         return userResponseConverter.entityToDTO(userList);
     }
 
+    /*
     @GetMapping("/find/{ID}")
-    public UserResponseDTO findById(@PathVariable(value = "ID") UUID id){
-        var user = userRepository.findById(id);
+    public UserResponseDTO findById(@PathVariable UUID ID){
+        var user = userRepository.findById(ID);
         return user.map(userResponseConverter::entityToDTO).orElse(null);
     }
 
-    @GetMapping("/save")
+     */
+
+
+    @PostMapping("/find/{username}")
+    public UserResponseDTO findByUsername(@PathVariable String username){
+        var user = userRepository.findUserByUsernameEquals(username);
+        var userId = userRepository.findById(user.getId());
+        return userId.map(userResponseConverter::entityToDTO).orElse(null);
+    }
+
+    @PostMapping("/save")
     public UserSaveDTO save(@RequestBody UserSaveDTO userSaveDTO){
         User user = userSaveConverter.dtoToEntity(userSaveDTO);
         user = userRepository.save(user);

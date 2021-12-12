@@ -10,8 +10,7 @@
 
     <nav>
       <router-link to="/login">Login</router-link> |
-      <router-link to="/register">register</router-link> |
-      <router-link to="/test">Test</router-link>
+      <router-link to="/register">register</router-link>
     </nav>
   </body>
   <router-view/>
