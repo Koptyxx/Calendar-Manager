@@ -36,7 +36,7 @@
         <div id='login'>
             <p v-if="passwords_error">Passwords aren't the same, try again please !</p>
             <form
-                 action=""
+                 action="http://localhost:8080/user/findAll/"
                  @submit="addUser"
             >
 
@@ -105,8 +105,8 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        username: this.formData.username,
-                        password: this.formData.password
+                        username: this.username,
+                        password: this.password
                     })
                 })
                 .then(res => {return res.json()})

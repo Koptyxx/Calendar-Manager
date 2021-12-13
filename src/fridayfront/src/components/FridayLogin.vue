@@ -89,7 +89,6 @@
             },
             users: [],
             passwordFieldType : "password"
-          
             }
         },
     
@@ -100,18 +99,11 @@
             },
 
             findUser(){
-                fetch('http://localhost:8080/user/find/' + this.formData.username, {
-                    method:'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        username: this.formData.username,
-                        password: this.formData.password
-                    })
-                })
-                .then(res => {return res.json()})
-                .then(data => console.log(data))
+                let url = "http://localhost:8080/user/find/" + this.formData.username
+                fetch(url)
+                .then(res => res.json())
+                .then(data => { console.log(data) });
+                window.open(url, '_black');
             }
         }
     }

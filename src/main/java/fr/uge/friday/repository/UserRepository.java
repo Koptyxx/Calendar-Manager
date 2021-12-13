@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
-    User findUserByUsernameEquals(String str);
+    Optional<User> findUserByUsernameEquals(String str);
 
     @Transactional
     long deleteUserByUsername(String name);
