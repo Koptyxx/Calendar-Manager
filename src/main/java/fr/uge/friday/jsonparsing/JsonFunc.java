@@ -53,7 +53,7 @@ public class JsonFunc {
                 location = root.path("location").asText();
                 username = root.path("username").asText();
                 var user = userRepository.findUserByUsernameEquals(username);
-                taskRepository.save(new Task(new Date(), description, location, user));
+                user.ifPresent(value -> taskRepository.save(new Task(new Date(), description, location, value)));
                 System.out.println(description + " " + location);
             }
         }

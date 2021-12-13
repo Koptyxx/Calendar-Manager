@@ -14,9 +14,8 @@ public class Insertions {
     }
 
     public static void insertTasks(UserRepository userRepository, TaskRepository repository, Date date, String description, String location, String username){
-
         var user = userRepository.findUserByUsernameEquals(username);
-        repository.save(new Task(date, description, location, user));
+        user.ifPresent(value -> repository.save(new Task(date, description, location, value)));
     }
 
 }
