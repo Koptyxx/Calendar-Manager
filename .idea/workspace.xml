@@ -6,10 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Added DTO record + DTO converter + changed Id type from long to UUID">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/Calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/Calendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

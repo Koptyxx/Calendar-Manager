@@ -5,6 +5,8 @@ fr/uge/friday/controller/UserController.class
 fr/uge/friday/repository/UserRepository.class
 fr/uge/friday/converter/UserResponseConverter.class
 fr/uge/friday/entity/User.class
+fr/uge/friday/controller/TaskController.class
+fr/uge/friday/converter/TaskResponseConverter.class
 fr/uge/friday/jsonparsing/JsonFunc.class
 fr/uge/friday/Insertions.class
 fr/uge/friday/FridayApplication.class
