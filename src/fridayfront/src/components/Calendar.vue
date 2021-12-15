@@ -9,20 +9,39 @@
   </head>
   <body>
     <ul class="nav nav-tabs justify-content-end">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Files</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">New Calendar</a>
-          <a class="dropdown-item" href="#">Load a calendar from existing file</a>
-          <a class="dropdown-item" href="#">Export my calendar</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link">Samy Ghamri</a>
+      </li>
+
+      <li class="nav-item">
+        <button class="btn dropdown-toggle text-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Files
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">New calendar</a><a class="dropdown-item" href="#">Load a calendar from
+            existing
+            file</a></li>
+          <li><a class="dropdown-item" href="#">Export my calendar</a></li>
+        </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Deconnexion</a>
+        <a class="nav-link" href="/login">Deconnexion</a>
       </li>
     </ul>
-  <div>
-
+  <div class="container">
+    <div class="row">
+      <p>informations intelligente à propos du prochain rdv</p>
+      <div class="col">Date</div>
+      <div class="col">Heure</div>
+      <div class="col">Lieu</div>
+      <div class="col">Météo</div>
+    </div>
+    <div class="row">
+      <p> liste des RDVs de la journée par ordre chronologique avec les informations principale (heure, lieu, etc)</p>
+    </div>
+    <div class="row">
+      <p>Un calendirer du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
+    </div>
   </div>
   </body>
 </template>

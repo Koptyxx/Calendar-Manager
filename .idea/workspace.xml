@@ -465,6 +465,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -481,7 +482,8 @@
     <MESSAGE value="demande à ton père" />
     <MESSAGE value="register + login good" />
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DTO record + DTO converter + changed Id type from long to UUID" />
+    <MESSAGE value="Starting the main page with the navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting the main page with the navbar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
