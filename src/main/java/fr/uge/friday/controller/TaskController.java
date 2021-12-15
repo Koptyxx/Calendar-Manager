@@ -38,13 +38,6 @@ public class TaskController {
         return task.map(taskResponseConverter::entityToDTO).orElse(null);
     }
 
-    /*@GetMapping("/find/{user}")
-    public TaskResponseDTO findUserTask(@PathVariable User user){
-
-    }
-    
-     */
-
     @PostMapping("/save")
     public TaskSaveDTO save(@RequestBody TaskSaveDTO taskSaveDTO){
         Task task = taskSaveConverter.dtoToEntity(taskSaveDTO);

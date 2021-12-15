@@ -61,4 +61,8 @@ public class Task {
     public User getUser() {
         return user;
     }
+
+    public UUID getId() {
+        return task_id;
+    }
 }
