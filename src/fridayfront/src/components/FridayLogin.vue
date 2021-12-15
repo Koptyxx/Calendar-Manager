@@ -12,7 +12,7 @@
 
     <ul class="nav nav-pills nav-justified mb-3">
         <li class="nav-item" role="presentation">
-            <router-link to="/login" aria-colcount="blue">
+
                 <a
                     class="nav-link active"
                     id="tab-login"
@@ -24,21 +24,20 @@
                 </a>
 
 
-            </router-link>
-
         </li>
         <li class="nav-item" role="presentation">
-            <router-link to="/register">
+
 
                 <a
-                    class="nav-link"
+                    class="nav-link text-primary"
                     id="tab-register"
+                    href="/register"
                     role="tab"
                     aria-selected="false"
                 >
                     Register
                 </a>
-            </router-link>
+
         </li>
     </ul>
         <div id='login'>

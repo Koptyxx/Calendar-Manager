@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Added DTO record + DTO converter + changed Id type from long to UUID">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/Calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/Calendar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -475,6 +453,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -491,7 +470,8 @@
     <MESSAGE value="demande à ton père" />
     <MESSAGE value="register + login good" />
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DTO record + DTO converter + changed Id type from long to UUID" />
+    <MESSAGE value="Starting the main page with the navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting the main page with the navbar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

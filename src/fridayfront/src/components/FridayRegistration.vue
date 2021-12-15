@@ -10,18 +10,19 @@
 
         <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
             <li class="nav-item" role="presentation">
-                <router-link to="/login">
+
                 <a
-                    class="nav-link"
+                    class="nav-link text-primary"
                     id="tab-login"
+                    href="/login"
                     role="tab"
                     aria-selected="false"
                 >Login
                 </a>
-                </router-link>
+
             </li>
             <li class="nav-item" role="presentation">
-                  <router-link to="/register">
+
                         <a class="nav-link active"
                             id="tab-register"
                             href="#"
@@ -29,7 +30,7 @@
                             aria-selected="true"
                         >Register
                         </a>
-                  </router-link>
+
             </li>
         </ul>
 
