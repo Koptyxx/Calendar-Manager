@@ -30,21 +30,10 @@ public class UserController {
         return userResponseConverter.entityToDTO(userList);
     }
 
-    /*
-    @GetMapping("/find/{ID}")
-    public UserResponseDTO findById(@PathVariable UUID ID){
-        var user = userRepository.findById(ID);
-        return user.map(userResponseConverter::entityToDTO).orElse(null);
-    }
-
-     */
-
-
-    @PostMapping("/find/{username}")
+    @GetMapping("/find/{username}")
     public UserResponseDTO findByUsername(@PathVariable String username){
         var user = userRepository.findUserByUsernameEquals(username);
-        var userId = userRepository.findById(user.getId());
-        return userId.map(userResponseConverter::entityToDTO).orElse(null);
+        return user.map(userResponseConverter::entityToDTO).orElse(null);
     }
 
     @PostMapping("/save")
