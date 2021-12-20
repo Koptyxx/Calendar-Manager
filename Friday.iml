@@ -171,6 +171,11 @@
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-api:2.8.4" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-manager:2.8.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.plexus:plexus-compiler-javac:2.8.4" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:22.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars.npm:v-calendar:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars.npm:core-js:3.19.3" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars.npm:date-fns:2.25.0" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars.npm:date-fns-tz:1.0.12" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars.npm:lodash:4.17.21" level="project" />
   </component>
 </module>

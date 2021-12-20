@@ -43,12 +43,24 @@
       <p>Un calendirer du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
     </div>
   </div>
+    <Calendar />
+    <DatePicker v-model="date" />
   </body>
 </template>
 
 <script>
+import { Calendar, DatePicker } from 'v-calendar';
 export default {
-  name: "Calendar"
+    name: "Calendar",
+    components: {
+        Calendar,
+        DatePicker,
+    },
+    data() {
+        return {
+            date: new Date(),
+        };
+    },
 }
 </script>
 
