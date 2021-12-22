@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../components/FridayLogin'
 import Register from '../components/FridayRegistration'
-import Calendar from '../components/Calendar'
+import Calendar from '../components/CalendarManager'
 import Home from '../views/Home'
 
 const routes = [

@@ -73,6 +73,9 @@
                 </div>
             </form>
         </div>
+        <Calendar/>
+        <DatePicker v-model="date"/>
+
     </body>
 </template>
 
@@ -81,13 +84,14 @@
   export default {
         data(){
             return{
+
                 formData:{
                     username: null,
                     password: null,
                     
             },
-            users: [],
-            passwordFieldType : "password"
+               users: [],
+               passwordFieldType : "password",
             }
         },
     

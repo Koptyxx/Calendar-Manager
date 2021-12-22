@@ -1,12 +1,10 @@
 <template>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Calendar</title>
-
-  </head>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Calendar</title>
+    </head>
   <body>
     <ul class="nav nav-tabs justify-content-end">
       <li class="nav-item">
@@ -40,7 +38,7 @@
       <p> liste des RDVs de la journée par ordre chronologique avec les informations principale (heure, lieu, etc)</p>
     </div>
     <div class="row">
-      <p>Un calendirer du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
+      <p>Un calendrier du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
     </div>
   </div>
     <Calendar />
@@ -50,17 +48,17 @@
 
 <script>
 import { Calendar, DatePicker } from 'v-calendar';
+
 export default {
-    name: "Calendar",
-    components: {
-        Calendar,
-        DatePicker,
-    },
-    data() {
-        return {
-            date: new Date(),
-        };
-    },
+  components: {
+    Calendar,
+    DatePicker,
+  },
+  data() {
+    return {
+      date: new Date(),
+    };
+  },
 }
 </script>
 
