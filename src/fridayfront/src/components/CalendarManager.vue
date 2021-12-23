@@ -43,17 +43,29 @@
   </div>
     <h2 class="text-decoration-underline text-danger">My Calendar</h2>
     <Calendar
-        :attributes="attrs"
+        :attributes="attributes"
         is-expanded
         is-dark/>
     <div class="row">
       <div class="col">
-        <button type="button" class="btn btn-success mt-3">Add Event</button>
+        <form v-if="displayAddEvent">
+          <label class="form-label">Description</label>
+          <input type="text" id="description" class="form-control" placeholder="Finishing my Java Project" v-model="description"/>
+          <div>
+            <date-picker class="mb-3 mt-3" is24hr v-model="date" mode="dateTime" :timezone="timezone"/>
+          </div>
+
+          <button type="button" v-on:click="addEvent" class="btn btn-success mt-3">Add Event</button>
+        </form>
+        <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
       </div>
       <div class="col">
         <button type="button" class="btn btn-info mt-3">Modify Event</button>
       </div>
       <div class="col">
+        <div>
+          <p v-for="todo in todos" :key="todo.description"> {{todo.description}} </p>
+        </div>
         <button type="button" class="btn btn-danger mt-3">Delete Event</button>
       </div>
     </div>
@@ -62,23 +74,55 @@
 </template>
 
 <script>
-import { Calendar } from 'v-calendar';
+import { Calendar, DatePicker } from 'v-calendar';
 
 export default {
   components: {
-    Calendar
+    Calendar,
+    DatePicker
   },
   data() {
+    const todos = [
+
+    ];
     return {
-      attrs: [
-        {
-          key: 'today',
-          highlight: true,
-          dates: new Date(),
-        },
-      ],
-      date: new Date()
+      incId: todos.length,
+      todos,
+      displayAddEvent: false,
+      description: "",
+      date: new Date(),
+      timezone: ''
     };
+  },
+  methods: {
+    addEvent() {
+      this.todos.push(
+          {
+            description: this.description,
+            isComplete: false,
+            dates: this.date
+          }
+      );
+      this.displayAddEvent = false
+    },
+    showAddEventForm() {
+      this.displayAddEvent = true
+    }
+  },
+  computed: {
+    attributes() {
+      return [
+        // Attributes for todos
+        ...this.todos.map(todo => ({
+          dates: todo.dates,
+          bar: true,
+          popover: {
+            label: todo.description
+          },
+          customData: todo,
+        })),
+      ];
+    },
   },
 }
 </script>
