@@ -73,8 +73,7 @@
                 </div>
             </form>
         </div>
-        <Calendar/>
-        <DatePicker v-model="date"/>
+
 
     </body>
 </template>

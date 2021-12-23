@@ -41,22 +41,42 @@
       <p>Un calendrier du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
     </div>
   </div>
-    <Calendar />
-    <DatePicker v-model="date" />
+    <h2 class="text-decoration-underline text-danger">My Calendar</h2>
+    <Calendar
+        :attributes="attrs"
+        is-expanded/>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-success mt-3">Add Event</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-info mt-3">Modify Event</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger mt-3">Delete Event</button>
+      </div>
+    </div>
+
   </body>
 </template>
 
 <script>
-import { Calendar, DatePicker } from 'v-calendar';
+import { Calendar } from 'v-calendar';
 
 export default {
   components: {
-    Calendar,
-    DatePicker,
+    Calendar
   },
   data() {
     return {
-      date: new Date(),
+      attrs: [
+        {
+          key: 'today',
+          highlight: true,
+          dates: new Date(),
+        },
+      ],
+      date: new Date()
     };
   },
 }
