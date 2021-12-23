@@ -101,7 +101,7 @@
             },
 
             findUser(){
-                let url = "http://localhost:8080/user/find/" + this.formData.username
+                let url = "http://localhost:8080/task/find/username/" + this.formData.username
                 fetch(url)
                 .then(res => res.json())
                 .then(data => { console.log(data) });

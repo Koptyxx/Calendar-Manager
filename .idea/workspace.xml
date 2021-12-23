@@ -4,10 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Starting to use the calendar from v-calendar plugin">
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Added DTO record + DTO converter + changed Id type from long to UUID">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Friday.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Friday.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskSaveConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskSaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskSaveDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/TaskController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskSaveConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskSaveDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskSaveDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +90,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/src/fridayfront/package.json" />
   </component>
   <component name="ProjectId" id="1zubEw8YNOs7Qfg337aDZb91nlv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -162,8 +188,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
-      <method v="2" />
+    <configuration name="FridayApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Friday" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.uge.friday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.uge.friday" />
+      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.FridayApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="FridayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Friday" />
@@ -185,16 +223,16 @@
       <item itemvalue="Application.lecodedubg" />
       <item itemvalue="Application.JsonFunc" />
       <item itemvalue="Application.CalendarManager" />
-      <item itemvalue="HTTP Request.generated-requests#1" />
       <item itemvalue="Spring Boot.FridayApplication" />
+      <item itemvalue="JUnit.FridayApplicationTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FridayApplication" />
+        <item itemvalue="JUnit.FridayApplicationTests" />
         <item itemvalue="Application.JsonFunc" />
         <item itemvalue="Application.CalendarManager" />
         <item itemvalue="Application.lecodedubg" />
-        <item itemvalue="HTTP Request.generated-requests#1" />
       </list>
     </recent_temporary>
   </component>
@@ -267,13 +305,6 @@
       <workItem from="1639339157929" duration="3426000" />
       <workItem from="1639384163305" duration="4945000" />
       <workItem from="1640021446554" duration="510000" />
-      <workItem from="1640036855508" duration="1972000" />
-      <workItem from="1640110376289" duration="632000" />
-      <workItem from="1640111290434" duration="3733000" />
-      <workItem from="1640119794222" duration="47000" />
-      <workItem from="1640125216981" duration="339000" />
-      <workItem from="1640209517079" duration="2177000" />
-      <workItem from="1640256387775" duration="4457000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -345,14 +376,7 @@
       <option name="project" value="LOCAL" />
       <updated>1638641858558</updated>
     </task>
-    <task id="LOCAL-00011" summary="Starting to use the calendar from v-calendar plugin">
-      <created>1640211642376</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1640211642376</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +493,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -487,8 +510,7 @@
     <MESSAGE value="register + login good" />
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
     <MESSAGE value="Starting the main page with the navbar" />
-    <MESSAGE value="Starting to use the calendar from v-calendar plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to use the calendar from v-calendar plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting the main page with the navbar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -8,11 +8,10 @@ import fr.uge.friday.dto.TaskSaveDTO;
 import fr.uge.friday.entity.Task;
 import fr.uge.friday.repository.TaskRepository;
 import fr.uge.friday.repository.UserRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @RestController
 @RequestMapping("/task")
@@ -54,4 +53,25 @@ public class TaskController {
         task = taskRepository.save(task);
         return taskSaveConverter.entityToDTO(task);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteTaskById(@PathVariable UUID id){
+        taskRepository.deleteTaskByIdTask(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/update/{id}")
+    public TaskSaveDTO update(@PathVariable UUID id, @RequestBody TaskSaveDTO taskSaveDTO){
+        Optional<Task> task = taskRepository.findById(id);
+
+        if (task.isPresent()) {
+            var x = task.get();
+            x.setDate(taskSaveDTO.date());
+            x.setDescription(taskSaveDTO.desc());
+            x.setLocation(taskSaveDTO.loc());
+            return taskSaveConverter.entityToDTO(x);
+        }
+        return null;
+    }
+
 }

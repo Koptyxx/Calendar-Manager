@@ -7,7 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="Friday" value="6dbafe8e-eed1-4aaa-8682-be43e22a36bd" />
-          <factory-entry name="entityManagerFactory" value="2b5314a7-f312-4722-8341-f1ad03eb32c7" />
+          <factory-entry name="entityManagerFactory" value="bce97c60-dcb8-4c00-86ca-9cd74cf2a4e8" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

@@ -44,7 +44,8 @@
     <h2 class="text-decoration-underline text-danger">My Calendar</h2>
     <Calendar
         :attributes="attrs"
-        is-expanded/>
+        is-expanded
+        is-dark/>
     <div class="row">
       <div class="col">
         <button type="button" class="btn btn-success mt-3">Add Event</button>

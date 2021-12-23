@@ -9,11 +9,24 @@ import java.util.UUID;
 public class Task {
     @Id
     @GeneratedValue
-    @Column(name = "task_id", nullable = false)
-    private UUID task_id;
+    @Column(name = "id_Task", nullable = false)
+    private UUID idTask;
 
     @Column(name = "date", nullable = false)
     private Date date;
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     @Column(name = "description", nullable = false)
     private String description;
     @Column(name = "location", nullable = false)
@@ -21,7 +34,7 @@ public class Task {
 
     @ManyToOne
     @JoinTable(name = "UserNTask",
-            joinColumns = @JoinColumn(name = "task_id"),
+            joinColumns = @JoinColumn(name = "id_Task"),
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
@@ -39,7 +52,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "id=" + task_id +
+                "id=" + idTask +
                 ", date=" + date +
                 ", description='" + description + '\'' +
                 ", location='" + location + '\'' +
@@ -63,6 +76,6 @@ public class Task {
     }
 
     public UUID getId() {
-        return task_id;
+        return idTask;
     }
 }
