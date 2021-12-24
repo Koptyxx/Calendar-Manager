@@ -36,7 +36,11 @@ public class CalendarManager {
     }
 
     public void showCalendar(){
-        System.out.println(calendar);
+        for(var ev : calendar.getComponents()){
+            if(ev.getName().equals("VEVENT")){
+                System.out.println(ev.getProperty("SUMMARY").getValue());
+            }
+        }
     }
 
     public static void main(String[] args) throws ParserException, IOException {

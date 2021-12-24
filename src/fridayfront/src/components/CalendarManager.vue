@@ -64,7 +64,7 @@
       </div>
       <div class="col">
         <div>
-          <p v-for="todo in todos" :key="todo.description"> {{todo.description}} </p>
+
         </div>
         <button type="button" class="btn btn-danger mt-3">Delete Event</button>
       </div>
@@ -82,9 +82,30 @@ export default {
     DatePicker
   },
   data() {
-    const todos = [
+    const todos = [];
+    const ical = require('ical');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const events = ical.parseICS('BEGIN:VCALENDAR\n' +
+        'VERSION:2.0\n' +
+        'CALSCALE:GREGORIAN\n' +
+        'BEGIN:VEVENT\n' +
+        'SUMMARY:Hey look! An example event!\n' +
+        'DTSTART;TZID=America/New_York:20130802T103400\n' +
+        'DTEND;TZID=America/New_York:20130802T110400\n' +
+        'LOCATION:1000 Broadway Ave.\\, Brooklyn\n' +
+        'DESCRIPTION: Do something in NY.\n' +
+        'STATUS:CONFIRMED\n' +
+        'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
+        'END:VEVENT\n' +
+        'END:VCALENDAR');
+    for (let k in events){
 
-    ];
+        var ev = events[k];
+        if(events[k].type == 'VEVENT') {
+          console.log(`${ev.summary} is in ${ev.location} on the ${ev.start.getDate()} of ${months[ev.start.getMonth()]} at ${ev.start.toLocaleTimeString('en-GB')}`);
+        }
+
+    }
     return {
       incId: todos.length,
       todos,
