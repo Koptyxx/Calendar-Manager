@@ -43,7 +43,7 @@
         <div id='login'>
             <form
                 action=""
-                @submit="findUser"
+                @submit.prevent="findUser"
             >
 
                 <div class="form-outline mb-4 text-center">
@@ -96,8 +96,17 @@
     
         methods:{
 
+            resetData: function () {
+                 this.formData.username = '';
+                 this.formData.password = '';
+            },
+
             showPassword(){
                 this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password"
+            },
+
+            getUsername(){
+                return this.formData.username
             },
 
             findUser(){
@@ -105,7 +114,9 @@
                 fetch(url)
                 .then(res => res.json())
                 .then(data => { console.log(data) });
-                window.open(url, '_black');
+                alert("Logged or not")
+                window.open("http://localhost:8080/calendar", '_black');
+                this.resetData();
             }
         }
     }

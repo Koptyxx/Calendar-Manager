@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_25_12_2021_16_44_[Changes]" date="1640447105131" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2021_16_44_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25/12/2021 16:44 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/FridayApp.jar" />
+    <option name="AFTER_PATH" value="target/FridayApp.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2021_16_44_[Changes]/FridayApp.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/FridayApp.jar.original" />
+    <option name="AFTER_PATH" value="target/FridayApp.jar.original" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2021_16_44_[Changes]/FridayApp.jar.original" />
+  </binary>
+</changelist>

@@ -101,7 +101,7 @@ export default {
     for (let k in events){
 
         var ev = events[k];
-        if(events[k].type == 'VEVENT') {
+        if(events[k].type === 'VEVENT') {
           console.log(`${ev.summary} is in ${ev.location} on the ${ev.start.getDate()} of ${months[ev.start.getMonth()]} at ${ev.start.toLocaleTimeString('en-GB')}`);
         }
 
