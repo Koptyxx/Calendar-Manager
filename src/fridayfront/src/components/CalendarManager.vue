@@ -51,6 +51,8 @@
         <form v-if="displayAddEvent">
           <label class="form-label">Description</label>
           <input type="text" id="description" class="form-control" placeholder="Finishing my Java Project" v-model="description"/>
+          <label class="form-label">Location :</label>
+          <input type="text" id="location" class="form-control" placeholder="8 avenue des Champs Elysée, Paris" v-model="location"/>
           <div>
             <date-picker class="mb-3 mt-3" is24hr v-model="date" mode="dateTime" :timezone="timezone"/>
           </div>
@@ -75,7 +77,7 @@
 
 <script>
 import { Calendar, DatePicker } from 'v-calendar';
-
+import data from './FridayLogin';
 export default {
   components: {
     Calendar,
@@ -83,7 +85,7 @@ export default {
   },
   data() {
     const todos = [];
-    const ical = require('ical');
+    /*const ical = require('ical');
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const events = ical.parseICS('BEGIN:VCALENDAR\n' +
         'VERSION:2.0\n' +
@@ -97,20 +99,14 @@ export default {
         'STATUS:CONFIRMED\n' +
         'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
         'END:VEVENT\n' +
-        'END:VCALENDAR');
-    for (let k in events){
-
-        var ev = events[k];
-        if(events[k].type === 'VEVENT') {
-          console.log(`${ev.summary} is in ${ev.location} on the ${ev.start.getDate()} of ${months[ev.start.getMonth()]} at ${ev.start.toLocaleTimeString('en-GB')}`);
-        }
-
-    }
+        'END:VCALENDAR');*/
+    console.log(data.data().formData.username);
     return {
       incId: todos.length,
       todos,
       displayAddEvent: false,
       description: "",
+      location: "",
       date: new Date(),
       timezone: ''
     };

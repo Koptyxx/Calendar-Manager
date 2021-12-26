@@ -42,8 +42,9 @@
     </ul>
         <div id='login'>
             <form
-                action=""
-                @submit.prevent="findUser"
+
+                action="/calendar"
+
             >
 
                 <div class="form-outline mb-4 text-center">
@@ -60,8 +61,8 @@
 
                 <div>
                     <button type="submit"
-                            class="btn btn-primary btn-block mb-4"
-                    >
+                            v-on:click="findUser"
+                            class="btn btn-primary btn-block mb-4">
                                 Sign in
                     </button>
                 </div>
@@ -93,7 +94,7 @@
                passwordFieldType : "password",
             }
         },
-    
+
         methods:{
 
             resetData: function () {
@@ -110,16 +111,21 @@
             },
 
             findUser(){
-                let url = "http://localhost:8080/task/find/username/" + this.formData.username
+                /*let url = "http://localhost:8080/task/find/username/" + this.formData.username
                 fetch(url)
                 .then(res => res.json())
                 .then(data => { console.log(data) });
-                alert("Logged or not")
-                window.open("http://localhost:8080/calendar", '_black');
-                this.resetData();
+                alert("Logged or not");
+                user_name = this.formData.username;
+                console.log(user_name);
+                /*window.open("http://localhost:8080/calendar", '_black');*/
+
+                /*this.resetData();*/
             }
         }
+
     }
+
 </script>
 
 
