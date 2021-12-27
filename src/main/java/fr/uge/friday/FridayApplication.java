@@ -22,8 +22,8 @@ public class FridayApplication {
     public CommandLineRunner run(UserRepository userRepository, TaskRepository taskRepository, EventRepository eventRepository) {
         return (args -> {
             taskRepository.deleteAll();
-            userRepository.deleteAll();
             eventRepository.deleteAll();
+            userRepository.deleteAll();
             insertUsers(userRepository, "Xhavit", "123");
             insertUsers(userRepository, "Samy", "456");
             insertTasks(userRepository, taskRepository, new Date(), "faire les courses", "Leclerc de Meaux", "Samy");
