@@ -1,10 +1,10 @@
 package fr.uge.friday.entity;
 
 import net.fortuna.ical4j.model.Calendar;
+import net.fortuna.ical4j.model.DateTime;
 import net.fortuna.ical4j.model.component.VEvent;
-import net.fortuna.ical4j.model.property.*;
-import net.fortuna.ical4j.model.Date;
 import net.fortuna.ical4j.model.property.Version;
+import net.fortuna.ical4j.model.property.*;
 
 import javax.persistence.*;
 import java.net.URISyntaxException;
@@ -29,7 +29,7 @@ public class Event {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
-    public Event(String description, String location, Date start, User user) throws URISyntaxException {
+    public Event(String description, String location, DateTime start, User user) throws URISyntaxException {
 
         Objects.requireNonNull(description);
         Objects.requireNonNull(location);

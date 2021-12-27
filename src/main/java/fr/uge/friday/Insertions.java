@@ -7,6 +7,7 @@ import fr.uge.friday.repository.EventRepository;
 import fr.uge.friday.repository.TaskRepository;
 import fr.uge.friday.repository.UserRepository;
 import net.fortuna.ical4j.model.Date;
+import net.fortuna.ical4j.model.DateTime;
 
 import java.net.URISyntaxException;
 
@@ -21,7 +22,7 @@ public class Insertions {
         user.ifPresent(value -> repository.save(new Task(date, description, location, value)));
     }
 
-    public static void insertEvent(UserRepository userRepository, EventRepository eventRepository, String description, String location, Date start, String username) throws URISyntaxException {
+    public static void insertEvent(UserRepository userRepository, EventRepository eventRepository, String description, String location, DateTime start, String username) throws URISyntaxException {
         var user = userRepository.findUserByUsernameEquals(username);
         if (user.isPresent())
             eventRepository.save(new Event(description, location, start, user.get()));
