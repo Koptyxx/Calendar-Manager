@@ -17,7 +17,7 @@ public class Event {
 
     @Id
     @GeneratedValue
-    @Column(name = "id_Cal", nullable = false)
+    @Column(name = "id_Cal", nullable = false, unique = true)
     private UUID idCal;
 
     @Column(name = "calendar", nullable = false)
@@ -29,7 +29,7 @@ public class Event {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
-    public Event(String description, String location, Date start, Date end, User user) throws URISyntaxException {
+    public Event(String description, String location, Date start, User user) throws URISyntaxException {
 
         Objects.requireNonNull(description);
         Objects.requireNonNull(location);
@@ -41,7 +41,7 @@ public class Event {
         calendar.getProperties().add(Version.VERSION_2_0);
         calendar.getProperties().add(CalScale.GREGORIAN);
 
-        VEvent event = new VEvent(start, end, description);
+        VEvent event = new VEvent(start, description);
         event.getProperties().add(new Location(location));
         event.getProperties().add(new Description(description));
         event.getProperties().add(new Organizer(user.getName()));

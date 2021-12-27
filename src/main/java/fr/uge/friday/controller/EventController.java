@@ -58,5 +58,4 @@ public class EventController {
         eventRepository.deleteEventByIdCal(id);
         return ResponseEntity.noContent().build();
     }
-
 }
