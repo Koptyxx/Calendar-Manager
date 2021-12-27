@@ -20,7 +20,7 @@ public class EventSaveConverter {
     public Event dtoToEntity(EventSaveDTO event) throws URISyntaxException {
         var user = userRepository.findUserByUsernameEquals(event.username());
         if(user.isPresent())
-            return new Event(event.description(), event.location(), event.start(), event.end(), user.get());
+            return new Event(event.description(), event.location(), event.start(), user.get());
         return null;
     }
 }
