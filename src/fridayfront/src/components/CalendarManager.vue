@@ -54,13 +54,13 @@
           <label class="form-label">Location :</label>
           <input type="text" id="location" class="form-control" placeholder="8 avenue des Champs Elysée, Paris" v-model="location"/>
           <div>
-            <date-picker class="mb-3 mt-3" :mode="mode" v-model="date"/>
+            <date-picker class="mb-1 mt-3" is24hr is-required :mode="mode" v-model="date"/>
           </div>
           <div>
             <input type="checkbox" @click="changeAllDay">
             <label class="form-label p-2">All day</label>
           </div>
-          <button type="button" v-on:click="addEvent" class="btn btn-success mt-3">Add Event</button>
+          <button type="button" v-on:click="showEvent" class="btn btn-success mt-3">Add Event</button>
         </form>
         <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
       </div>
@@ -106,7 +106,7 @@ export default {
       todos,
       username: JSON.parse(localStorage.getItem('user')),
       isAllDay: false,
-      mode: "time",
+      mode: "dateTime",
       displayAddEvent: false,
       description: "",
       location: "",
@@ -117,7 +117,10 @@ export default {
   methods: {
     changeAllDay(){
       this.isAllDay = !this.isAllDay;
-      console.log(this.isAllDay)
+      this.mode = this.mode === "dateTime" ? "date" : "dateTime";
+    },
+    showEvent(){
+      console.log("Nouvel Event : \n Descritpion : " + this.description + "\nLocation : " + this.location + "\n Date : " + this.date);
     },
     addEvent() {
       this.todos.push(
