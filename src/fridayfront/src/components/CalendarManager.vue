@@ -8,7 +8,7 @@
   <body>
     <ul class="nav nav-tabs justify-content-end">
       <li class="nav-item">
-        <a class="nav-link">Samy Ghamri</a>
+        <a class="nav-link">{{ username }}</a>
       </li>
 
       <li class="nav-item">
@@ -54,9 +54,12 @@
           <label class="form-label">Location :</label>
           <input type="text" id="location" class="form-control" placeholder="8 avenue des Champs Elysée, Paris" v-model="location"/>
           <div>
-            <date-picker class="mb-3 mt-3" is24hr v-model="date" mode="dateTime" :timezone="timezone"/>
+            <date-picker class="mb-3 mt-3" :mode="mode" v-model="date"/>
           </div>
-
+          <div>
+            <input type="checkbox" @click="changeAllDay">
+            <label class="form-label p-2">All day</label>
+          </div>
           <button type="button" v-on:click="addEvent" class="btn btn-success mt-3">Add Event</button>
         </form>
         <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
@@ -65,9 +68,7 @@
         <button type="button" class="btn btn-info mt-3">Modify Event</button>
       </div>
       <div class="col">
-        <div>
 
-        </div>
         <button type="button" class="btn btn-danger mt-3">Delete Event</button>
       </div>
     </div>
@@ -77,7 +78,7 @@
 
 <script>
 import { Calendar, DatePicker } from 'v-calendar';
-import data from './FridayLogin';
+
 export default {
   components: {
     Calendar,
@@ -100,18 +101,24 @@ export default {
         'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
         'END:VEVENT\n' +
         'END:VCALENDAR');*/
-    console.log(data.data().formData.username);
     return {
       incId: todos.length,
       todos,
+      username: JSON.parse(localStorage.getItem('user')),
+      isAllDay: false,
+      mode: "time",
       displayAddEvent: false,
       description: "",
       location: "",
       date: new Date(),
-      timezone: ''
+
     };
   },
   methods: {
+    changeAllDay(){
+      this.isAllDay = !this.isAllDay;
+      console.log(this.isAllDay)
+    },
     addEvent() {
       this.todos.push(
           {
