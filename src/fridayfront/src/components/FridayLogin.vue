@@ -61,7 +61,7 @@
 
                 <div>
                     <button type="submit"
-                            v-on:click="findUser"
+                            v-on:click="getUsername"
                             class="btn btn-primary btn-block mb-4">
                                 Sign in
                     </button>
@@ -80,7 +80,6 @@
 </template>
 
 <script>
-
   export default {
         data(){
             return{
@@ -107,7 +106,8 @@
             },
 
             getUsername(){
-                return this.formData.username
+                var obj = JSON.stringify(this.formData.username);
+                localStorage.setItem('user', obj);
             },
 
             findUser(){
@@ -125,7 +125,6 @@
         }
 
     }
-
 </script>
 
 

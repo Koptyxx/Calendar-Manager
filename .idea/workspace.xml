@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Introduction of the ical library for our frontend + entity of our calendar">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_2021_14_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_12_2021_14_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2021_16_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_12_2021_16_44__Changes_.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Trying to export datas to calendar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
@@ -282,7 +279,8 @@
       <workItem from="1640293471014" duration="1651000" />
       <workItem from="1640295739859" duration="6322000" />
       <workItem from="1640344712710" duration="4473000" />
-      <workItem from="1640553380108" duration="5340000" />
+      <workItem from="1640553380108" duration="5571000" />
+      <workItem from="1640612456707" duration="6876000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -361,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640302213513</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Trying to export datas to calendar">
+      <created>1640560197789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1640560197789</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +502,8 @@
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
     <MESSAGE value="Starting the main page with the navbar" />
     <MESSAGE value="Possibility to add an event to our calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Possibility to add an event to our calendar" />
+    <MESSAGE value="Trying to export datas to calendar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to export datas to calendar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
