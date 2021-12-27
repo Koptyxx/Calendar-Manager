@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Added DTO record + DTO converter + changed Id type from long to UUID">
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Changes on Event + POM's warning fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/EventSaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/EventSaveDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.4c4b78c9.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,6 +283,7 @@
       <workItem from="1640021446554" duration="510000" />
       <workItem from="1640293471014" duration="1651000" />
       <workItem from="1640295739859" duration="6235000" />
+      <workItem from="1640625286233" duration="449000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -366,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638641858558</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changes on Event + POM's warning fixed">
+      <created>1640624899876</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1640624899876</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +496,8 @@
     <MESSAGE value="register + login good" />
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
     <MESSAGE value="Starting the main page with the navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting the main page with the navbar" />
+    <MESSAGE value="Changes on Event + POM's warning fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on Event + POM's warning fixed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

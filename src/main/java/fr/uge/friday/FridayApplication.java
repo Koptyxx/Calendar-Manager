@@ -29,7 +29,7 @@ public class FridayApplication {
             insertTasks(userRepository, taskRepository, new Date(), "faire les courses", "Leclerc de Meaux", "Samy");
             insertTasks(userRepository, taskRepository, new Date(), "déjeuner avec Pat", "Paris", "Xhavit");
             insertTasks(userRepository, taskRepository, new Date(), "just tests", "Paris", "Xhavit");
-            //insertEvent(userRepository, eventRepository, "faire les courses", "Carrefour", new Date(), "Xhavit");
+            insertEvent(userRepository, eventRepository, "faire les courses", "Carrefour", new Date(), "Xhavit");
         });
     }
 }
