@@ -29,24 +29,32 @@ public class Event {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
-    public Event(String description, String location, DateTime start, User user) throws URISyntaxException {
+    public void addEvent(String description, String location, DateTime start, boolean isAllDay) throws URISyntaxException {
 
         Objects.requireNonNull(description);
         Objects.requireNonNull(location);
-        Objects.requireNonNull(user);
+
         Objects.requireNonNull(start);
 
-        calendar = new Calendar();
-        calendar.getProperties().add(new ProdId("-//Ben Fortuna//iCal4j 1.0//EN"));
-        calendar.getProperties().add(Version.VERSION_2_0);
-        calendar.getProperties().add(CalScale.GREGORIAN);
+        VEvent event;
 
-        VEvent event = new VEvent(start, description);
+        event = new VEvent(start, description);
+
         event.getProperties().add(new Location(location));
         event.getProperties().add(new Description(description));
         event.getProperties().add(new Organizer(user.getName()));
 
         calendar.getComponents().add(event);
+    }
+
+    public Event(User user){
+
+        Objects.requireNonNull(user);
+
+        calendar = new Calendar();
+        calendar.getProperties().add(new ProdId("-//Ben Fortuna//iCal4j 1.0//EN"));
+        calendar.getProperties().add(Version.VERSION_2_0);
+        calendar.getProperties().add(CalScale.GREGORIAN);
 
         this.user = user;
     }

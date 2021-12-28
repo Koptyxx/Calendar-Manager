@@ -79,6 +79,8 @@
 <script>
 import { Calendar, DatePicker } from 'v-calendar';
 
+const ical = require("ical");
+
 export default {
   components: {
     Calendar,
@@ -86,7 +88,8 @@ export default {
   },
   data() {
     const todos = [];
-    /*const ical = require('ical');
+
+    //const ical = require('ical');
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const events = ical.parseICS('BEGIN:VCALENDAR\n' +
         'VERSION:2.0\n' +
@@ -100,8 +103,10 @@ export default {
         'STATUS:CONFIRMED\n' +
         'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
         'END:VEVENT\n' +
-        'END:VCALENDAR');*/
-    return {
+        'END:VCALENDAR');
+
+
+      return {
       incId: todos.length,
       todos,
       username: JSON.parse(localStorage.getItem('user')),
@@ -118,6 +123,7 @@ export default {
     changeAllDay(){
       this.isAllDay = !this.isAllDay;
       this.mode = this.mode === "dateTime" ? "date" : "dateTime";
+      this.test();
     },
     showEvent(){
       console.log("Nouvel Event : \n Descritpion : " + this.description + "\nLocation : " + this.location + "\n Date : " + this.date);
@@ -134,7 +140,14 @@ export default {
     },
     showAddEventForm() {
       this.displayAddEvent = true
-    }
+    },
+
+      test (){
+          let url = "http://localhost:8080/event/find/username/" + this.username;
+          console.log(fetch(url)
+              .then(res => console.log(ical.parseICS(res[1]))))
+      }
+
   },
   computed: {
     attributes() {

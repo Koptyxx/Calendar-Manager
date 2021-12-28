@@ -41,9 +41,11 @@
         </li>
     </ul>
         <div id='login'>
+
+
             <form
 
-                action="/calendar"
+                action=""
 
             >
 
@@ -61,7 +63,7 @@
 
                 <div>
                     <button type="submit"
-                            v-on:click="getUsername"
+                            v-on:click="findUser"
                             class="btn btn-primary btn-block mb-4">
                                 Sign in
                     </button>
@@ -105,22 +107,53 @@
                 this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password"
             },
 
-            getUsername(){
-                var obj = JSON.stringify(this.formData.username);
-                localStorage.setItem('user', obj);
-            },
-
             findUser(){
-                /*let url = "http://localhost:8080/task/find/username/" + this.formData.username
+                const obj = JSON.stringify(this.formData.username);
+                localStorage.setItem('user', obj);
+                let url = "http://localhost:8080/task/find/username/" + this.formData.username
+                let toCal = '/login';
                 fetch(url)
                 .then(res => res.json())
-                .then(data => { console.log(data) });
-                alert("Logged or not");
-                user_name = this.formData.username;
-                console.log(user_name);
-                /*window.open("http://localhost:8080/calendar", '_black');*/
+                this.resetData();
+                this.$router.push("/calendar")
+                    /*.then(x => {
+                        const status = x.status;
+                        console.log(status);
+                        if(status === 200){
+                            toCal.replace(toCal, '/calendar');
+                            //console.log("là");
+                            //this.$router.push("/calendar")
+                        }
+                    });
 
-                /*this.resetData();*/
+                     */
+
+                /*console.log(toCal);
+                this.$router.push(toCal);
+
+                 */
+                //.then(res => res.json())
+               // this.resetData();
+
+                /*console.log(response);
+                if(response === 200){
+                    this.$router.push("/calendar")
+                }
+
+                 */
+                //this.$router.push("/calendar")
+                    /*.then(resp => {
+                        if (resp.status === 200){
+                            this.resetData();
+                            this.$router.push("/calendar")
+                        }
+                        else{
+                            this.$router.push("/login")
+                        }
+                    })/;
+
+                     */
+
             }
         }
 

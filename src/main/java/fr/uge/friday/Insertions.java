@@ -22,10 +22,14 @@ public class Insertions {
         user.ifPresent(value -> repository.save(new Task(date, description, location, value)));
     }
 
-    public static void insertEvent(UserRepository userRepository, EventRepository eventRepository, String description, String location, DateTime start, String username) throws URISyntaxException {
+    public static void insertEvent(UserRepository userRepository, EventRepository eventRepository, String description, String location, DateTime start, String username, boolean isAllDay) throws URISyntaxException {
         var user = userRepository.findUserByUsernameEquals(username);
-        if (user.isPresent())
-            eventRepository.save(new Event(description, location, start, user.get()));
+        Event event;
+        if(user.isPresent()) {
+            event = new Event(user.get());
+            event.addEvent(description, location, start, isAllDay);
+            eventRepository.save(event);
+        }
     }
 
 }
