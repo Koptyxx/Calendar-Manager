@@ -8,6 +8,7 @@ import net.fortuna.ical4j.model.property.*;
 
 import javax.persistence.*;
 import java.net.URISyntaxException;
+import java.text.ParseException;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -29,17 +30,14 @@ public class Event {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
-    public void addEvent(String description, String location, DateTime start, boolean isAllDay) throws URISyntaxException {
-
+    public void addEvent(String description, String location, String start, boolean isAllDay) throws URISyntaxException, ParseException {
         Objects.requireNonNull(description);
         Objects.requireNonNull(location);
-
         Objects.requireNonNull(start);
 
         VEvent event;
 
-        event = new VEvent(start, description);
-
+        event = new VEvent(new DateTime(start), description);
         event.getProperties().add(new Location(location));
         event.getProperties().add(new Description(description));
         event.getProperties().add(new Organizer(user.getName()));
