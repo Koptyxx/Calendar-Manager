@@ -11,25 +11,28 @@
         <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
             <li class="nav-item" role="presentation">
 
-                <a
-                    class="nav-link text-primary"
-                    id="tab-login"
-                    href="/login"
-                    role="tab"
-                    aria-selected="false"
-                >Login
-                </a>
+                <router-link to="/login" class="text-primary">
+                  <a
+                      class="nav-link text-primary"
+                      id="tab-login"
+                      href="/login"
+                      role="tab"
+                      aria-selected="false"
+                  >Login
+                  </a>
+                </router-link>
 
             </li>
             <li class="nav-item" role="presentation">
-
-                        <a class="nav-link active"
-                            id="tab-register"
-                            href="#"
-                            role="tab"
-                            aria-selected="true"
-                        >Register
-                        </a>
+                        <router-link to="/register" class="text-primary">
+                          <a class="nav-link active"
+                             id="tab-register"
+                             href="#"
+                             role="tab"
+                             aria-selected="true"
+                          >Register
+                          </a>
+                        </router-link>
 
             </li>
         </ul>

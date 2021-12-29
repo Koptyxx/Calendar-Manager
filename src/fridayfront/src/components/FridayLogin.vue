@@ -13,30 +13,33 @@
     <ul class="nav nav-pills nav-justified mb-3">
         <li class="nav-item" role="presentation">
 
-                <a
-                    class="nav-link active"
-                    id="tab-login"
-                    href="#"
-                    role="tab"
-                    aria-selected="true"
-                >
+                <router-link to="/login">
+                  <a
+                      class="nav-link active"
+                      id="tab-login"
+                      href="#"
+                      role="tab"
+                      aria-selected="true"
+                  >
                     Login
-                </a>
+                  </a>
+                </router-link>
 
 
         </li>
         <li class="nav-item" role="presentation">
 
 
-                <a
-                    class="nav-link text-primary"
-                    id="tab-register"
-                    href="/register"
-                    role="tab"
-                    aria-selected="false"
-                >
+                <router-link to="/register" class="text-primary">
+                  <a
+                      class="nav-link text-primary"
+                      id="tab-register"
+                      role="tab"
+                      aria-selected="false"
+                  >
                     Register
-                </a>
+                  </a>
+                </router-link>
 
         </li>
     </ul>
@@ -111,11 +114,13 @@
                 const obj = JSON.stringify(this.formData.username);
                 localStorage.setItem('user', obj);
                 let url = "http://localhost:8080/task/find/username/" + this.formData.username
-                let toCal = '/login';
+
                 fetch(url)
-                .then(res => res.json())
+                .then(res => res.status)
+                this.$router.push("/calendar");
                 this.resetData();
-                this.$router.push("/calendar")
+                /*this.$router.push("/calendar");*/
+                /*this.$router.push("/calendar")*/
                     /*.then(x => {
                         const status = x.status;
                         console.log(status);

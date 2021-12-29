@@ -65,7 +65,7 @@
         <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-info mt-3">Modify Event</button>
+        <button type="button" v-on:click="test" class="btn btn-info mt-3">Modify Event</button>
       </div>
       <div class="col">
 
@@ -79,7 +79,7 @@
 <script>
 import { Calendar, DatePicker } from 'v-calendar';
 
-const ical = require("ical");
+
 
 export default {
   components: {
@@ -88,10 +88,9 @@ export default {
   },
   data() {
     const todos = [];
-
-    //const ical = require('ical');
+    /*const ical = require('ical');
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const events = ical.parseICS('BEGIN:VCALENDAR\n' +
+    const data = ical.parseICS('BEGIN:VCALENDAR\n' +
         'VERSION:2.0\n' +
         'CALSCALE:GREGORIAN\n' +
         'BEGIN:VEVENT\n' +
@@ -104,9 +103,15 @@ export default {
         'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
         'END:VEVENT\n' +
         'END:VCALENDAR');
+    for (let k in data) {
 
+        var ev = data[k];
+        if (data[k].type == 'VEVENT') {
+          console.log(`${ev.summary} is in ${ev.location} on the ${ev.start.getDate()} of ${months[ev.start.getMonth()]} at ${ev.start.toLocaleTimeString('en-GB')}`);
 
-      return {
+      }
+    }*/
+    return {
       incId: todos.length,
       todos,
       username: JSON.parse(localStorage.getItem('user')),
@@ -123,11 +128,11 @@ export default {
     changeAllDay(){
       this.isAllDay = !this.isAllDay;
       this.mode = this.mode === "dateTime" ? "date" : "dateTime";
-      this.test();
     },
     showEvent(){
       console.log("Nouvel Event : \n Descritpion : " + this.description + "\nLocation : " + this.location + "\n Date : " + this.date);
     },
+
     addEvent() {
       this.todos.push(
           {
@@ -138,16 +143,18 @@ export default {
       );
       this.displayAddEvent = false
     },
+    test (){
+      /*'use strict';
+      const ical = require('ical');*/
+      let url = "http://localhost:8080/event/find/username/" + this.username;
+      fetch(url)
+          .then(res => res.json())
+          .then(res => console.log(res));
+
+    },
     showAddEventForm() {
       this.displayAddEvent = true
-    },
-
-      test (){
-          let url = "http://localhost:8080/event/find/username/" + this.username;
-          console.log(fetch(url)
-              .then(res => console.log(ical.parseICS(res[1]))))
-      }
-
+    }
   },
   computed: {
     attributes() {
