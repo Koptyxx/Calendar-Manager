@@ -81,8 +81,7 @@
 </template>
 
 <script>
-    'use stricts'
-  import router from "@/router"
+
   export default {
         data(){
             return{
@@ -114,14 +113,15 @@
                 localStorage.setItem('user', obj);
                 let url = "http://localhost:8080/task/find/username/" + this.formData.username
                 fetch(url)
-                .then(function (res){
+                /*.then(function (res){
                     if(res.status === 200){
                         console.log("avant")
-                        router.push('Calendar')
+                        router.push('/calendar')
                         console.log("après du avant");
                     }
-                })
+                })*/
                 console.log("après");
+                this.$router.push("/calendar");
 
 
                 /*this.$router.push("/calendar");*/
