@@ -23,7 +23,9 @@
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Deconnexion</a>
+        <router-link to="/login">
+          <a class="nav-link" href="/login">Deconnexion</a>
+        </router-link>
       </li>
     </ul>
   <div class="container">
@@ -99,7 +101,7 @@ export default {
       displayAddEvent: false,
       description: "",
       location: "",
-      date: new Date(),
+      date: undefined,
 
     };
   },
@@ -121,7 +123,39 @@ export default {
           }
       );
       this.displayAddEvent = false
-
+      let data_date = this.date.getFullYear().toString();
+     if((this.date.getMonth() + 1).toString().length === 1){
+        data_date += ("0" + (this.date.getMonth()+1).toString());
+     }
+     else{
+       data_date += (this.date.getMonth()+1).toString();
+     }
+     if(this.date.getDate().toString().length === 1){
+       data_date += ("0" + this.date.getDate().toString());
+     }
+     else{
+       data_date += this.date.getDate().toString();
+     }
+     data_date += "T";
+     if(this.date.getHours().toString().length === 1){
+       data_date += ("0" + this.date.getHours().toString());
+     }
+     else{
+       data_date += this.date.getHours().toString();
+     }
+     if(this.date.getMinutes().toString().length === 1){
+       data_date += ("0" + this.date.getMinutes().toString());
+     }
+     else{
+       data_date += this.date.getMinutes().toString();
+     }
+     if(this.date.getSeconds().toString().length === 1){
+       data_date += ("0"+this.date.getSeconds().toString());
+     }
+     else{
+       data_date += this.date.getSeconds().toString();
+     }
+     console.log(data_date);
      let url = "http://localhost:8080/event/save";
       fetch(url, {
         method:'POST',
@@ -131,11 +165,12 @@ export default {
         body: JSON.stringify({
           description: this.description,
           location: this.location,
-          start:  "20211231T170000",
+          start:  data_date,
           username: this.username,
           isAllDay: this.isAllDay
         })
       });
+
     },
     test (){
       /*'use strict';
