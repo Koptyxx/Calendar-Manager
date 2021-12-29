@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.ParseException;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -46,7 +47,7 @@ public class EventController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Void> save(@RequestBody EventSaveDTO eventSaveDTO) throws URISyntaxException {
+    public ResponseEntity<Void> save(@RequestBody EventSaveDTO eventSaveDTO) throws URISyntaxException, ParseException {
         Event event = eventSaveConverter.dtoToEntity(eventSaveDTO);
         eventRepository.save(event);
         URI location = URI.create(String.format("http://localhost:8080/user/find/%s", eventSaveDTO.username()));

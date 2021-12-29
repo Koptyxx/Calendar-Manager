@@ -60,7 +60,7 @@
             <input type="checkbox" @click="changeAllDay">
             <label class="form-label p-2">All day</label>
           </div>
-          <button type="button" v-on:click="showEvent" class="btn btn-success mt-3">Add Event</button>
+          <button type="button" v-on:click="addEvent" class="btn btn-success mt-3">Add Event</button>
         </form>
         <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
       </div>
@@ -87,30 +87,9 @@ export default {
     DatePicker
   },
   data() {
+
     const todos = [];
-    /*const ical = require('ical');
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const data = ical.parseICS('BEGIN:VCALENDAR\n' +
-        'VERSION:2.0\n' +
-        'CALSCALE:GREGORIAN\n' +
-        'BEGIN:VEVENT\n' +
-        'SUMMARY:Hey look! An example event!\n' +
-        'DTSTART;TZID=America/New_York:20130802T103400\n' +
-        'DTEND;TZID=America/New_York:20130802T110400\n' +
-        'LOCATION:1000 Broadway Ave.\\, Brooklyn\n' +
-        'DESCRIPTION: Do something in NY.\n' +
-        'STATUS:CONFIRMED\n' +
-        'UID:7014-1567468800-1567555199@peterbraden@peterbraden.co.uk\n' +
-        'END:VEVENT\n' +
-        'END:VCALENDAR');
-    for (let k in data) {
 
-        var ev = data[k];
-        if (data[k].type == 'VEVENT') {
-          console.log(`${ev.summary} is in ${ev.location} on the ${ev.start.getDate()} of ${months[ev.start.getMonth()]} at ${ev.start.toLocaleTimeString('en-GB')}`);
-
-      }
-    }*/
     return {
       incId: todos.length,
       todos,
@@ -137,11 +116,26 @@ export default {
       this.todos.push(
           {
             description: this.description,
-            isComplete: false,
-            dates: this.date
+            dates: this.date,
+            location: this.location
           }
       );
       this.displayAddEvent = false
+
+     let url = "http://localhost:8080/event/save";
+      fetch(url, {
+        method:'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          description: this.description,
+          location: this.location,
+          start:  "20211231T170000",
+          username: this.username,
+          isAllDay: this.isAllDay
+        })
+      });
     },
     test (){
       /*'use strict';
@@ -149,7 +143,19 @@ export default {
       let url = "http://localhost:8080/event/find/username/" + this.username;
       fetch(url)
           .then(res => res.json())
-          .then(res => console.log(res));
+          .then(res => {
+            const datas = res[0].calendar;
+            for(let k in datas["components"]){
+              const data = datas["components"][k]
+              if(data["name"] === "VEVENT"){
+                this.todos.push({
+                  description: data["description"]["value"],
+                  dates: data["dateStamp"]["dateTime"],
+                  location: data["location"]["value"],
+                });
+              }
+            }
+          })
 
     },
     showAddEventForm() {
