@@ -46,11 +46,7 @@
         <div id='login'>
 
 
-            <form
-
-                action=""
-
-            >
+            <form>
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label" for="username">Username</label>
@@ -85,6 +81,8 @@
 </template>
 
 <script>
+    'use stricts'
+  import router from "@/router"
   export default {
         data(){
             return{
@@ -111,14 +109,21 @@
             },
 
             findUser(){
-                const obj = JSON.stringify(this.formData.username);
+                let self = this;
+                const obj = JSON.stringify(self.formData.username);
                 localStorage.setItem('user', obj);
                 let url = "http://localhost:8080/task/find/username/" + this.formData.username
-
                 fetch(url)
-                .then(res => res.status)
-                this.$router.push("/calendar");
-                this.resetData();
+                .then(function (res){
+                    if(res.status === 200){
+                        console.log("avant")
+                        router.push('Calendar')
+                        console.log("après du avant");
+                    }
+                })
+                console.log("après");
+
+
                 /*this.$router.push("/calendar");*/
                 /*this.$router.push("/calendar")*/
                     /*.then(x => {

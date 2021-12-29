@@ -5,7 +5,6 @@
       <img src="./assets/friday.png" alt="logo" width="250" height="150">
     </div>
     <p>
-
     </p>
 
     <nav>
@@ -13,11 +12,13 @@
       <router-link to="/register">register</router-link> |
       <router-link to="/calendar">calendar</router-link>
     </nav>
-  </body>
-  <router-view/>
 
+  </body>
+    <p></p>
+    <router-view/>
 
 </template>
+
 
 <style>
 #app {
