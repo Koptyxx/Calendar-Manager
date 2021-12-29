@@ -7,6 +7,7 @@ import fr.uge.friday.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 import java.net.URISyntaxException;
+import java.text.ParseException;
 
 @Component
 public class EventSaveConverter {
@@ -20,7 +21,7 @@ public class EventSaveConverter {
     }
 
 
-    public Event dtoToEntity(EventSaveDTO event) throws URISyntaxException {
+    public Event dtoToEntity(EventSaveDTO event) throws URISyntaxException, ParseException {
         var user = userRepository.findUserByUsernameEquals(event.username());
         Event cal = null;
         if(user.isPresent()) {
