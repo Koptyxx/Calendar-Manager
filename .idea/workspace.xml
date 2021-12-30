@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="no more problem with the calendar acess, can add an event with the front">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2021_14_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2021_14_18__Changes_.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="good date on the calendar + startint to display the rdv's of the day">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2021_14_05_[Changes]/FridayApp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2021_14_05_[Changes]/FridayApp.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2021_14_05_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_12_2021_14_05__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.df76e756.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1fa4eba8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1fa4eba8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.dc1ff1d7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.dc1ff1d7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
@@ -304,6 +297,8 @@
       <workItem from="1640730804970" duration="4969000" />
       <workItem from="1640735892853" duration="2167000" />
       <workItem from="1640777079871" duration="15463000" />
+      <workItem from="1640872517003" duration="12958000" />
+      <workItem from="1640894013832" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -396,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640795006705</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="good date on the calendar + startint to display the rdv's of the day">
+      <created>1640816827680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1640816827680</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +536,8 @@
     <MESSAGE value="Possibility to add an event to our calendar" />
     <MESSAGE value="can navigate through navbar + problem with router push and access to calendar" />
     <MESSAGE value="no more problem with the calendar acess, can add an event with the front" />
-    <option name="LAST_COMMIT_MESSAGE" value="no more problem with the calendar acess, can add an event with the front" />
+    <MESSAGE value="good date on the calendar + startint to display the rdv's of the day" />
+    <option name="LAST_COMMIT_MESSAGE" value="good date on the calendar + startint to display the rdv's of the day" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

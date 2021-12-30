@@ -37,10 +37,10 @@
       <div class="col">Météo</div>
     </div>
     <div class="row">
-      <button type="button" v-on:click="selectingTodaysRDV" class="btn btn-success mt-3">Show Event of the days</button>
-    </div>
-    <div class="row">
-      <p>Un calendrier du mois avec par jour, une petite barre horizontale indiquant la présence d'un RDV </p>
+      <h2 class="text-decoration-underline text-danger">Events of the day</h2>
+      <div v-for="todo in todaysTODO" :key="todo">
+        <h4>Description : {{todaysTODO[k].description}}</h4>
+      </div>
     </div>
   </div>
   <h2 class="text-decoration-underline text-danger">My Calendar</h2>
@@ -71,7 +71,9 @@
     </div>
     <div class="col">
 
-      <button type="button" class="btn btn-danger mt-3">Delete Event</button>
+      <button type="button"
+              v-on:click="selectingTodaysRDV"
+              class="btn btn-danger mt-3">Delete Event</button>
     </div>
   </div>
 
@@ -86,27 +88,28 @@ export default {
     Calendar,
     DatePicker
   },
+
   data() {
-
     const todos = [];
-
+    const todaysTODO = [];
     return {
       incId: todos.length,
       todos,
+      todaysTODO,
       username: JSON.parse(localStorage.getItem('user')),
       isAllDay: false,
       mode: "dateTime",
       displayAddEvent: false,
       description: "",
       location: "",
-      date: new Date(),
-
+      date: new Date()
     };
   },
   methods: {
     changeAllDay(){
       this.isAllDay = !this.isAllDay;
       this.mode = this.mode === "dateTime" ? "date" : "dateTime";
+      console.log(this.todaysTODO);
     },
     showEvent(){
       console.log("Nouvel Event : \n Descritpion : " + this.description + "\nLocation : " + this.location + "\n Date : " + this.date);
@@ -169,7 +172,6 @@ export default {
           isAllDay: this.isAllDay
         })
       });
-
     },
     test (){
       let url = "http://localhost:8080/event/find/username/" + this.username;
@@ -186,10 +188,31 @@ export default {
                   dates: data["startDate"]["date"],
                   location: data["location"]["value"],
                 });
+
+                const today = new Date();
+                const date_event = data["startDate"]["date"];
+                let year = "";
+                let month = "";
+                let day = "";
+                for(let i = 0; i < 10; i++){
+                  if(i < 4)
+                    year += date_event[i];
+                  if (i > 4 && i < 7)
+                    month += date_event[i]
+                  if(i > 7 && i < 10)
+                    day += date_event[i];
+                }
+                const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
+                if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
+                  this.todaysTODO.push({
+                    description: data["description"]["value"],
+                    location: data["location"]["value"],
+                    dates: data["startDate"]["date"]
+                  });
+                }
               }
             }
           })
-
     },
 
     showAddEventForm() {
@@ -197,6 +220,7 @@ export default {
     },
 
     selectingTodaysRDV() {
+      const tdays = [];
       const today = new Date();
       for(let k in this.todos){
         const date_event = this.todos[k].dates;
@@ -211,15 +235,20 @@ export default {
             if(i > 7 && i < 10)
               day += date_event[i];
         }
-        const dat = new Date(parseInt(year), parseInt(month), parseInt(day));
-        console.log(dat.getFullYear().toString()+dat.getMonth().toString()+dat.getDate().toString());
-        if(dat.getMonth().toString() === today.getMonth().toString() && dat.getFullYear().toString() === today.getFullYear().toString() && dat.getDate().toString() === today.getDate().toString()){
-          console.log(date_event);
+        const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
+        if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
+          this.tdays.push({
+            description: this.todos[k].description,
+            location: this.todos[k].location,
+            dates: this.todos[k].dates
+          })
         }
-
       }
+      return tdays;
     }
-
+  },
+  created: function(){
+    this.test();
   },
   computed: {
     attributes() {
