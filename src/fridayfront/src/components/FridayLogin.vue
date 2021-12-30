@@ -46,7 +46,7 @@
         <div id='login'>
 
 
-            <form>
+            <form @submit="checkUser">
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label" for="username">Username</label>
@@ -62,7 +62,6 @@
 
                 <div>
                     <button type="submit"
-                            v-on:click="findUser"
                             class="btn btn-primary btn-block mb-4">
                                 Sign in
                     </button>
@@ -81,8 +80,8 @@
 </template>
 
 <script>
-
-  export default {
+    import router from "@/router"
+    export default {
         data(){
             return{
 
@@ -107,66 +106,31 @@
                 this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password"
             },
 
-            findUser(){
-                let self = this;
-                const obj = JSON.stringify(self.formData.username);
-                localStorage.setItem('user', obj);
-                let url = "http://localhost:8080/task/find/username/" + this.formData.username
-                fetch(url)
-                /*.then(function (res){
-                    if(res.status === 200){
-                        console.log("avant")
-                        router.push('/calendar')
-                        console.log("après du avant");
+            checkUser(){
+                fetch("http://localhost:8080/user/check/", {
+                    method:'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: this.formData.username,
+                        password: this.formData.password
+                    })
+                })
+                .then(res => {
+                    if (res.status === 200){
+                        this.resetData();
+                        router.go(1);
+                        router.push("calendar");
                     }
-                })*/
-                console.log("après");
-                this.$router.push("/calendar");
-
-
-                /*this.$router.push("/calendar");*/
-                /*this.$router.push("/calendar")*/
-                    /*.then(x => {
-                        const status = x.status;
-                        console.log(status);
-                        if(status === 200){
-                            toCal.replace(toCal, '/calendar');
-                            //console.log("là");
-                            //this.$router.push("/calendar")
-                        }
-                    });
-
-                     */
-
-                /*console.log(toCal);
-                this.$router.push(toCal);
-
-                 */
-                //.then(res => res.json())
-               // this.resetData();
-
-                /*console.log(response);
-                if(response === 200){
-                    this.$router.push("/calendar")
-                }
-
-                 */
-                //this.$router.push("/calendar")
-                    /*.then(resp => {
-                        if (resp.status === 200){
-                            this.resetData();
-                            this.$router.push("/calendar")
-                        }
-                        else{
-                            this.$router.push("/login")
-                        }
-                    })/;
-
-                     */
-
-            }
+                    else if(res.status === 404){
+                        alert("You have entered an invalid username or password.")
+                        router.push("login");
+                    }
+                })
+            },
         }
-
     }
 </script>
 
