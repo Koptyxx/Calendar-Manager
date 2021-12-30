@@ -4,30 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="no more problem with the calendar acess, can add an event with the front">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2021_14_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_12_2021_14_18__Changes_.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="work on router not successful + more changes on add event methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.df76e756.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1fa4eba8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1fa4eba8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.dc1ff1d7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.dc1ff1d7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/UserRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +42,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -114,6 +97,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -300,10 +284,8 @@
       <workItem from="1640295739859" duration="6322000" />
       <workItem from="1640344712710" duration="4473000" />
       <workItem from="1640553380108" duration="5340000" />
-      <workItem from="1640638818115" duration="2318000" />
-      <workItem from="1640730804970" duration="4969000" />
-      <workItem from="1640735892853" duration="2167000" />
-      <workItem from="1640777079871" duration="15463000" />
+      <workItem from="1640626381369" duration="1006000" />
+      <workItem from="1640870838732" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -382,21 +364,28 @@
       <option name="project" value="LOCAL" />
       <updated>1640302213513</updated>
     </task>
-    <task id="LOCAL-00012" summary="can navigate through navbar + problem with router push and access to calendar">
-      <created>1640783833860</created>
+    <task id="LOCAL-00012" summary="bug on Event table insertions fixed">
+      <created>1640625959898</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1640783833860</updated>
+      <updated>1640625959898</updated>
     </task>
-    <task id="LOCAL-00013" summary="no more problem with the calendar acess, can add an event with the front">
-      <created>1640795006705</created>
+    <task id="LOCAL-00013" summary="work on router not successful + more changes on add event methods">
+      <created>1640799254306</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1640795006705</updated>
+      <updated>1640799254306</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="work on router not successful + more changes on add event methods">
+      <created>1640799420605</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1640799420605</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +502,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -532,9 +520,9 @@
     <MESSAGE value="Added DTO record + DTO converter + changed Id type from long to UUID" />
     <MESSAGE value="Starting the main page with the navbar" />
     <MESSAGE value="Possibility to add an event to our calendar" />
-    <MESSAGE value="can navigate through navbar + problem with router push and access to calendar" />
-    <MESSAGE value="no more problem with the calendar acess, can add an event with the front" />
-    <option name="LAST_COMMIT_MESSAGE" value="no more problem with the calendar acess, can add an event with the front" />
+    <MESSAGE value="bug on Event table insertions fixed" />
+    <MESSAGE value="work on router not successful + more changes on add event methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on router not successful + more changes on add event methods" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
