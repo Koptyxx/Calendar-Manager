@@ -53,7 +53,15 @@ public class UserController {
         if(user.isPresent())
             return ResponseEntity.ok().build();
         return ResponseEntity.notFound().build();
+    }
 
+    @GetMapping("/check/username/{username}")
+    public ResponseEntity<Void> checkUsername(@PathVariable String username){
+        var user = userRepository.findUserByUsernameEquals(username);
+        if(user.isPresent()){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/delete/{username}")

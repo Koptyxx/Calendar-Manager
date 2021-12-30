@@ -39,10 +39,7 @@
 
         <div id='login'>
             <p v-if="passwords_error">Passwords aren't the same, try again please !</p>
-            <form
-                 action="http://localhost:8080/user/findAll/"
-                 @submit="addUser"
-            >
+            <form @submit="addUser">
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label" for="username">Username</label>
@@ -51,16 +48,16 @@
                  <!-- Password input -->
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label">Password</label>
-                    <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
+                    <input id="pass" :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
                     <input type="checkbox" @click="showPassword">
                     <label>Show Password</label>
                 </div>
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label">Repeat password</label>
-                    <input :type="confirmed_passwordFieldType" class="form-control" placeholder="Enter your password again please" v-model="confirmed_password"/>
+                    <input id="repeat" :type="confirmed_passwordFieldType" class="form-control" placeholder="Enter your password again please" v-model="confirmed_password"/>
                     <input type="checkbox" @click="showPassword">
-                    <label>Show Password</label>
+                    <label> Show Password</label>
                 </div>
 
                 <div>
@@ -68,13 +65,13 @@
                     <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
                 </div>
             </form>
-
-
         </div>
     </body>
 </template>
 
 <script>
+
+    import router from "@/router";
 
     export default {
         data(){
@@ -97,24 +94,42 @@
             },
 
             testPasswords(){
-                this.passwords_error = this.confirmed_password !== this.password;
-                console.log(this.password + " = " + this.confirmed_password)
-                console.log("Are they the same passwords : " + this.passwords_error)
+                return this.passwords_error = this.confirmed_password !== this.password;
             },
 
             addUser(){
-                fetch('http://localhost:8080/user/save', {
-                    method:'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        username: this.username,
-                        password: this.password
-                    })
+
+                let pass = document.getElementById("pass");
+                let repeat = document.getElementById("repeat");
+
+                const url = "http://localhost:8080/user/check/username/".concat(this.username);
+                fetch(url)
+                .then(response => {
+
+                    if (pass.value !== repeat.value){
+                        alert("Passwords are not the same, please check them");
+                        router.push('/Register');
+                    }
+                    else if (response.status === 404){
+                        alert("Username is already used, please chose another one");
+                        router.push('/Register');
+                    }
+                    else if (response.status === 200){
+                        fetch('http://localhost:8080/user/save', {
+                            method:'POST',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                username: this.username,
+                                password: this.password
+                            })
+                        })
+                        router.push("Calendar");
+
+                    }
                 })
-                .then(res => {return res.json()})
-                .then(data => console.log(data))
             }
         }
     };
