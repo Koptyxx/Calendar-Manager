@@ -16,4 +16,6 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     long deleteUserByUsername(String name);
 
     @NotNull Optional<User> findById(@NotNull UUID id);
+
+    Optional<User> findUserByUsernameAndPasswordEquals(String username, String password);
 }

@@ -47,6 +47,15 @@ public class UserController {
         return userSaveConverter.entityToDTO(user);
     }
 
+    @PostMapping("/check")
+    public ResponseEntity<Void> check(@RequestBody UserSaveDTO userSaveDTO){
+        var user = userRepository.findUserByUsernameAndPasswordEquals(userSaveDTO.username(), userSaveDTO.password());
+        if(user.isPresent())
+            return ResponseEntity.ok().build();
+        return ResponseEntity.notFound().build();
+
+    }
+
     @DeleteMapping("/delete/{username}")
     public ResponseEntity<Void> deleteUserByUsername(@PathVariable String username){
 
