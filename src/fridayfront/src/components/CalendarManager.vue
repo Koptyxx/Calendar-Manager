@@ -132,6 +132,7 @@ export default {
       todos,
       todaysTODO,
       nextTODO: undefined,
+
       username: JSON.parse(localStorage.getItem('user')),
       isAllDay: false,
       mode: "dateTime",

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Register from '../components/FridayRegistration'
 import Calendar from '../components/CalendarManager'
+import Login from '../components/FridayLogin'
 import Home from '../views/Home'
 
 const routes = [
@@ -13,7 +14,7 @@ const routes = [
     {
         path: '/login',
         name: 'Login',
-        component: () => import('../components/FridayLogin')
+        component: Login
     },
     {
         path: '/register',

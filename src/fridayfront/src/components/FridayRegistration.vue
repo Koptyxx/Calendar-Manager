@@ -59,8 +59,7 @@
                 </div>
 
                 <div>
-                  <!--<router-link to="/test" v-if="!testPasswords"></router-link>-->
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
                 </div>
             </form>
         </div>

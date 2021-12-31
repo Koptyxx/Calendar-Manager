@@ -40,21 +40,13 @@ public class Event {
     }
 
     public void addEvent(String description, String location, String start, boolean isAllDay) throws URISyntaxException, ParseException {
-        Objects.requireNonNull(description);
-        Objects.requireNonNull(location);
-        Objects.requireNonNull(start);
-
+        Objects.requireNonNull(description); Objects.requireNonNull(location); Objects.requireNonNull(start);
         VEvent event;
-
-        if (isAllDay)
-            event = new VEvent(new DateTime(start), endDateTimeAllDay(start), description);
-        else
-            event = new VEvent(new DateTime(start), description);
-
+        if (isAllDay) event = new VEvent(new DateTime(start), endDateTimeAllDay(start), description);
+        else event = new VEvent(new DateTime(start), description);
         event.getProperties().add(new Location(location));
         event.getProperties().add(new Description(description));
         event.getProperties().add(new Organizer(user.getName()));
-
         calendar.getComponents().add(event);
     }
 
@@ -83,6 +75,11 @@ public class Event {
 
     public User getUser() {
         return user;
+    }
+
+
+    public void setCalendar(Calendar calendar) {
+        this.calendar = calendar;
     }
 
 }

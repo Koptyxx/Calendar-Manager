@@ -25,7 +25,6 @@ public class FridayApplication {
             insertUsers(userRepository, "Xhavit", "123");
             insertUsers(userRepository, "Samy", "456");
             insertEvent(userRepository, eventRepository, "faire les courses", "Carrefour", "20211229T200000", "Xhavit", false);
-            insertEvent(userRepository, eventRepository, "testing my program", "maison", "20211231T200000", "Xhavit", false);
 
         });
     }

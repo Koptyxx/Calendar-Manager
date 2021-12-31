@@ -5,18 +5,11 @@ import fr.uge.friday.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 public interface EventRepository extends JpaRepository<Event, UUID> {
 
-    List<Event> findByUserEquals(User user);
-
-    Optional<Event> findEventByUserEquals(User user);
-
-    @Transactional
-    void deleteEventByIdCal(UUID id);
+    Event findEventByUserEquals(User user);
 
     @Transactional
     void deleteEventsByUser(User user);

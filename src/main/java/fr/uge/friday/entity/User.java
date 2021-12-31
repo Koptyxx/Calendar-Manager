@@ -28,25 +28,8 @@ public class User {
         return username;
     }
 
-    public void setName(String name) {
-        this.username = name;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "Users{" +
-                "id_user=" + id_user +
-                ", name='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
     }
 
     public UUID getId() {

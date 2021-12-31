@@ -1,49 +1,39 @@
 package fr.uge.friday.controller;
 
 
-import fr.uge.friday.converter.EventResponseConverter;
 import fr.uge.friday.converter.EventSaveConverter;
-import fr.uge.friday.dto.EventResponseDTO;
 import fr.uge.friday.dto.EventSaveDTO;
 import fr.uge.friday.entity.Event;
 import fr.uge.friday.repository.EventRepository;
 import fr.uge.friday.repository.UserRepository;
+import net.fortuna.ical4j.data.CalendarBuilder;
+import net.fortuna.ical4j.data.CalendarOutputter;
+import net.fortuna.ical4j.data.ParserException;
+import net.fortuna.ical4j.data.UnfoldingReader;
+import net.fortuna.ical4j.model.Calendar;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.ParseException;
-import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/event")
 public class EventController {
 
     private final EventRepository eventRepository;
-    private final EventResponseConverter eventResponseConverter;
     private final EventSaveConverter eventSaveConverter;
     private final UserRepository userRepository;
 
-    public EventController(EventRepository eventRepository, EventResponseConverter eventResponseConverter, UserRepository userRepository, EventSaveConverter eventSaveConverter) {
+    public EventController(EventRepository eventRepository, UserRepository userRepository, EventSaveConverter eventSaveConverter) {
         this.eventRepository = eventRepository;
-        this.eventResponseConverter = eventResponseConverter;
         this.userRepository = userRepository;
         this.eventSaveConverter = eventSaveConverter;
-    }
-
-    @GetMapping("/findAll")
-    public List<EventResponseDTO> findAll(){
-        List<Event> events = eventRepository.findAll();
-        return eventResponseConverter.entitiesToDTO(events);
-    }
-
-    @GetMapping("/find/username/{username}")
-    public List<EventResponseDTO> findByDate(@PathVariable String username){
-        var user = userRepository.findUserByUsernameEquals(username);
-        return eventResponseConverter.entitiesToDTO(Objects.requireNonNull(user.map(eventRepository::findByUserEquals).orElse(null)));
     }
 
     @PostMapping("/save")
@@ -54,9 +44,48 @@ public class EventController {
         return ResponseEntity.created(location).build();
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteEventById(@PathVariable UUID id){
-        eventRepository.deleteEventByIdCal(id);
+    @DeleteMapping("/delete/{username}")
+    public ResponseEntity<Void> deleteEventByUsername(@PathVariable String username){
+        var user = userRepository.findUserByUsernameEquals(username);
+        if (user.isPresent()) {
+            eventRepository.deleteEventsByUser(user.get());
+            eventRepository.save(new Event(user.get()));
+        }
         return ResponseEntity.noContent().build();
+    }
+
+    private static void writeCal(Calendar cal, String file) throws IOException {
+        FileOutputStream fout = new FileOutputStream(file);
+        CalendarOutputter outputter = new CalendarOutputter();
+        outputter.output(cal, fout);
+    }
+
+    @PostMapping("/write")
+    public ResponseEntity<Void> writeCalInFile(@RequestBody String username) throws IOException {
+        var user = userRepository.findUserByUsernameEquals(username);
+        if(user.isPresent()){
+            var event = eventRepository.findEventByUserEquals(user.get());
+            writeCal(event.getCalendar(), username + "-Calendar.ics");
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    private static Calendar createCal(String file) throws IOException, ParserException {
+        Objects.requireNonNull(file);
+        CalendarBuilder builder = new CalendarBuilder();
+        UnfoldingReader ufrdr = new UnfoldingReader(new FileReader(file));
+        return builder.build(ufrdr);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<Void> createFromFile(@RequestBody String file, @RequestBody String username) throws IOException, ParserException {
+        var user = userRepository.findUserByUsernameEquals(username);
+        if(user.isPresent()){
+            var event = eventRepository.findEventByUserEquals(user.get());
+            event.setCalendar(createCal(file));
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 }

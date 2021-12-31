@@ -22,12 +22,11 @@ public class EventSaveConverter {
 
     public Event dtoToEntity(EventSaveDTO event) throws URISyntaxException, ParseException {
         var user = userRepository.findUserByUsernameEquals(event.username());
-        Event cal = null;
+        Event calendar = null;
         if(user.isPresent()) {
-            var calendar = eventRepository.findEventByUserEquals(user.get());
-            cal = calendar.orElseGet(() -> new Event(user.get()));
-            cal.addEvent(event.description(), event.location(), event.start(), event.isAllDay());
+            calendar = eventRepository.findEventByUserEquals(user.get());
+            calendar.addEvent(event.description(), event.location(), event.start(), event.isAllDay());
         }
-        return cal;
+        return calendar;
     }
 }
