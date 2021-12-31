@@ -4,52 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="final push">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bce97c60-dcb8-4c00-86ca-9cd74cf2a4e8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2021_13_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_12_2021_13_31__Changes_.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="final real push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport.odt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/UserSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/UserSaveConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/EventSaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/EventSaveDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/UserSaveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/UserSaveDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/FridayController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventResponseConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/UserResponseConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/UserSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/UserSaveConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/EventResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/UserResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.c50b9b6b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.c50b9b6b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
@@ -446,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640887692627</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="final push">
+      <created>1640990330232</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1640990330233</updated>
+    </task>
+    <task id="LOCAL-00018" summary="final real push">
+      <created>1640990410366</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1640990410366</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +565,8 @@
     <MESSAGE value="Login, register working as they should + router still not working" />
     <MESSAGE value="almost done with the calendar page + starting the files things" />
     <MESSAGE value="final push" />
-    <option name="LAST_COMMIT_MESSAGE" value="final push" />
+    <MESSAGE value="final real push" />
+    <option name="LAST_COMMIT_MESSAGE" value="final real push" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
