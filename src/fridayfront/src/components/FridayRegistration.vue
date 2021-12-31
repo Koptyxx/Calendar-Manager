@@ -41,12 +41,12 @@
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label" for="username">Username</label>
-                    <input type="text" id="username" class="form-control" placeholder="Username" v-model="username"/>
+                    <input type="text" id="username" class="form-control" placeholder="Username" v-model="username" required/>
                 </div>
                  <!-- Password input -->
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label">Password</label>
-                    <input id="pass" :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
+                    <input id="pass" :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password" required/>
                     <input type="checkbox" @click="showPassword">
                     <label> Show Password</label>
                 </div>
@@ -54,12 +54,13 @@
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label">Repeat password</label>
                     <input id="repeat" :type="confirmed_passwordFieldType" class="form-control" placeholder="Enter your password again please" v-model="confirmed_password"/>
-                    <input type="checkbox" @click="showPassword">
+                    <input type="checkbox" @click="showConfirmedPassword">
                     <label> Show Password</label>
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+                  <!--<router-link to="/test" v-if="!testPasswords"></router-link>-->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
                 </div>
             </form>
         </div>
@@ -68,7 +69,7 @@
 
 <script>
 
-    import router from "@/router";
+   /* import router from "@/router"; */
 
     export default {
         data(){
@@ -127,8 +128,15 @@
                                 password: this.password
                             })
                         })
-                        this.resetData();
-                        router.push("Calendar");
+                            .then(res => {
+                              if (res.status === 200){
+                                this.resetData();
+                                this.$router.push("/login");
+                              }
+                              else if(res.status === 404){
+                                alert("Registration gone wrong, please try again !");
+                              }
+                            })
                     }
                 })
             }

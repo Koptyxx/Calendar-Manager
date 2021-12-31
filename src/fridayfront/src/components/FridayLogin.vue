@@ -50,12 +50,12 @@
 
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label" for="username">Username</label>
-                    <input type="text" id="username" class="form-control" placeholder="Username" v-model="formData.username"/>
+                    <input type="text" id="username" class="form-control" placeholder="Username" v-model="formData.username" required/>
                 </div>
                 <!-- Password input -->
                 <div class="form-outline mb-4 text-center">
                     <label class="form-label">Password</label>
-                    <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="formData.password"/>
+                    <input :type="passwordFieldType" class="form-control" placeholder="Password" v-model="formData.password" required/>
                     <input type="checkbox" @click="showPassword">
                     <label>Show Password</label>
                 </div>
@@ -80,7 +80,6 @@
 </template>
 
 <script>
-    import router from "@/router"
     export default {
         data(){
             return{
@@ -120,8 +119,10 @@
                 })
                 .then(res => {
                     if (res.status === 200){
+                        const obj = JSON.stringify(this.formData.username);
+                        localStorage.setItem('user', obj);
                         this.resetData();
-                        router.push("calendar");
+                        this.$router.push("calendar");
                     }
                     else if(res.status === 404){
                         alert("You have entered an invalid username or password.")

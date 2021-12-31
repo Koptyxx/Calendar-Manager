@@ -7,9 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import static fr.uge.friday.Insertions.insertEvent;
-import static fr.uge.friday.Insertions.insertUsers;
-
 
 @SpringBootApplication
 public class FridayApplication {
@@ -22,10 +19,6 @@ public class FridayApplication {
         return (args -> {
             eventRepository.deleteAll();
             userRepository.deleteAll();
-            insertUsers(userRepository, "Xhavit", "123");
-            insertUsers(userRepository, "Samy", "456");
-            insertEvent(userRepository, eventRepository, "faire les courses", "Carrefour", "20211229T200000", "Xhavit", false);
-
         });
     }
 }

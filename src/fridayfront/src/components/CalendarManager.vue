@@ -16,14 +16,20 @@
         Files
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item"  v-on:click="showEvent">New calendar</a></li>
-        <li><a class="dropdown-item"  v-on:click="showEvent">Load a calendar from existing file</a></li>
-        <li><a class="dropdown-item"  v-on:click="showEvent">Export my calendar</a></li>
+        <li><a class="dropdown-item"  v-on:click="resetCalendar">New calendar</a></li>
+        <li>
+          <div>
+            <p>Load a calendar from file</p>
+            <input type="text" v-model="filePath">
+            <button class="small" type="button" v-on:click="setCalendarFromFile">Load</button>
+          </div>
+        </li>
+        <li><a class="dropdown-item"  v-on:click="exportCalendar">Export my calendar</a></li>
       </ul>
     </li>
     <li class="nav-item">
       <router-link to="/login">
-        <a class="nav-link">Deconnexion</a>
+        <a class="nav-link">Log out</a>
       </router-link>
     </li>
   </ul>
@@ -37,10 +43,10 @@
         <h4 class="text-decoration-underline">Location</h4>
       </div>
       <div class="col">
-        <h4 class="text-decoration-underline">Heure</h4>
+        <h4 class="text-decoration-underline">Starting at</h4>
       </div>
     </div>
-    <div class="row">
+    <div class="row" v-if="this.nextTODO !== undefined">
       <div class="col">
         <h6>{{this.nextTODO.description}}</h6>
       </div>
@@ -102,10 +108,12 @@
       <button v-if="!displayAddEvent" type="button" v-on:click="showAddEventForm" class="btn btn-success mt-3">Add Event</button>
     </div>
     <div class="col">
-      <button type="button" v-on:click="test" class="btn btn-info mt-3">Modify Event</button>
+      <button type="button" v-on:click="showEvent" class="btn btn-info mt-3">Modify Event</button>
     </div>
     <div class="col">
-
+      <ul class="list-group">
+        <a class="list-group-item list-group-item-action" v-for="todo in this.todos" :key="todo">{{todo.description}} : {{todo.dates}}</a>
+      </ul>
       <button type="button"
               v-on:click="selectingTodaysRDV"
               class="btn btn-danger mt-3">Delete Event</button>
@@ -132,9 +140,9 @@ export default {
       todos,
       todaysTODO,
       nextTODO: undefined,
-
       username: JSON.parse(localStorage.getItem('user')),
       isAllDay: false,
+      filePath: "",
       mode: "dateTime",
       displayAddEvent: false,
       description: "",
@@ -148,20 +156,58 @@ export default {
       this.mode = this.mode === "dateTime" ? "date" : "dateTime";
       console.log(this.todaysTODO);
     },
-    showEvent(){
-      console.log("hey je veux faire ça !")
+    setCalendarFromFile(){
+      let url = "http://localhost:8080/event/create/";
+      fetch(url, {
+        method:'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          file: this.filePath,
+          username: this.username
+        })
+      })
+      .then(res => console.log(res));
     },
 
-    addEvent() {
-      this.todos.push(
-          {
-            description: this.description,
-            dates: this.date,
-            location: this.location
-          }
-      );
-      this.displayAddEvent = false
-
+    exportCalendar(){
+        let url = "http://localhost:8080/event/write/";
+            fetch(url , {
+              method: "POST"
+            })
+    }
+    ,
+    resetCalendar(){
+      let url = "http://localhost:8080/event/delete/";
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: this.username
+        })
+      })
+      .then(res => console.log(res));
+      document.location.reload(true);
+    }
+    ,
+    pushInTodayTODOS(){
+      const tday = new Date();
+      if(tday.getFullYear() === this.date.getFullYear() && tday.getMonth() === this.date.getMonth() && tday.getDate() === this.date.getDate()){
+        this.todaysTODO.push(
+            {
+              description: this.description,
+              dates: this.date,
+              location: this.location
+            }
+        );
+      }
+    }
+    ,
+    dataDateAtRightFormat(){
       let data_date = this.date.getFullYear().toString();
       if((this.date.getMonth() + 1).toString().length === 1){
         data_date += ("0" + (this.date.getMonth()+1).toString());
@@ -194,7 +240,25 @@ export default {
       else{
         data_date += this.date.getSeconds().toString();
       }
+      return data_date;
+    },
 
+    pushInTodos(){
+      this.todos.push(
+          {
+            description: this.description,
+            dates: this.date,
+            location: this.location
+          }
+      );
+    }
+    ,
+    addEvent() {
+      this.pushInTodos();
+      this.displayAddEvent = false
+      this.pushInTodayTODOS();
+      const data_date = this.dataDateAtRightFormat();
+      this.dataDateAtRightFormat(data_date);
       let url = "http://localhost:8080/event/save";
       fetch(url, {
         method:'POST',
@@ -210,7 +274,46 @@ export default {
         })
       });
     },
-    test (){
+    pushTodoFromQuery(data){
+      this.todos.push({
+        description: data["description"]["value"],
+        dates: data["startDate"]["date"],
+        location: data["location"]["value"],
+      });
+    }
+    ,
+    fromJSONtoStringDate(date_event){
+      let year = ""; let month = ""; let day = ""; let hours = ""; let minutes = "";
+      for(let i = 0; i < 16; i++){
+        if(i < 4)
+          year += date_event[i];
+        if (i > 4 && i < 7)
+          month += date_event[i]
+        if(i > 7 && i < 10)
+          day += date_event[i];
+        if(i > 10 && i < 13)
+          hours += date_event[i];
+        if(i > 13 && i < 16)
+          minutes += date_event[i];
+      }
+      return {year, month, day, hours, minutes};
+    },
+    pushNextTodo(data){
+      this.nextTODO = {
+        description: data["description"]["value"],
+        dates: data["startDate"]["date"],
+        location: data["location"]["value"],
+      }
+    },
+    pushTodaysTodoFromQuery(data){
+      this.todaysTODO.push({
+        description: data["description"]["value"],
+        location: data["location"]["value"],
+        dates: data["startDate"]["date"]
+      });
+    }
+    ,
+    starter (){
       let url = "http://localhost:8080/event/find/username/" + this.username;
       fetch(url)
           .then(res => res.json())
@@ -219,48 +322,21 @@ export default {
               const datas = res[i].calendar;
               for(let k in datas["components"]){
                 const data = datas["components"][k]
-
                 if(data["name"] === "VEVENT"){
-                  this.todos.push({
-                    description: data["description"]["value"],
-                    dates: data["startDate"]["date"],
-                    location: data["location"]["value"],
-                  });
-
+                  this.pushTodoFromQuery(data);
                   const today = new Date();
                   const date_event = data["startDate"]["date"];
-                  let year = "";
-                  let month = "";
-                  let day = "";
-                  let hours = "";
-                  let minutes = "";
-                  for(let i = 0; i < 16; i++){
-                    if(i < 4)
-                      year += date_event[i];
-                    if (i > 4 && i < 7)
-                      month += date_event[i]
-                    if(i > 7 && i < 10)
-                      day += date_event[i];
-                    if(i > 10 && i < 13)
-                      hours += date_event[i];
-                    if(i > 13 && i < 16)
-                      minutes += date_event[i];
-                  }
-                  const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
-                  dat.setHours(parseInt(hours,10), parseInt(minutes, 10));
-
+                  const dateFormat = this.fromJSONtoStringDate(date_event);
+                  const dat = new Date(parseInt(dateFormat.year,10), parseInt(dateFormat.month, 10) - 1,  parseInt(dateFormat.day, 10));
+                  dat.setHours(parseInt(dateFormat.hours,10), parseInt(dateFormat.minutes, 10));
                   if(this.nextTODO === undefined){
-                    this.nextTODO = {
-                      description: data["description"]["value"],
-                      dates: data["startDate"]["date"],
-                      location: data["location"]["value"],
-                    }
+                    this.pushNextTodo(data);
                   }
                   /*else{
                     let year = "";
                     let month = "";
                     let day = "";
-                    let hours = "";
+                    /*let hours = "";
                     let minutes = "";
                     for(let i = 0; i < 16; i++){
                       if(i < 4)
@@ -269,33 +345,44 @@ export default {
                         month += this.nextTODO.dates[i];
                       if(i > 7 && i < 10)
                         day += this.nextTODO.dates[i];
-                      if(i > 10 && i < 13)
+                     /* if(i > 10 && i < 13)
                         hours += this.nextTODO.dates[i];
                       if(i > 13 && i < 16)
                         minutes += this.nextTODO.dates[i];
                     }
-                    const next = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
-                    next.setHours(parseInt(hours,10), parseInt(minutes, 10));
-                    /*const tday = new Date();
-                     const addtday = this.millitday.getFullYear() + tday.getMonth() + tday.getDate() + tday.getHours() + tday.getMinutes();
-                     const addnext = next.getFullYear() + next.getMonth() + next.getDate() + next.getHours() + next.getMinutes();
-                     const adddat = dat.getFullYear() + dat.getMonth() + dat.getDate() + dat.getHours() + dat.getMinutes();
-
-
+                    const actual = year+"-"+month+"-"+day;
+                    const tday = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString()+"-"+today.getDate().toString();
+                    const challenger = dat.getFullYear().toString()+"-"+(dat.getMonth()+1).toString()+"-"+dat.getDate().toString()
+                    const diffinMSactual = new Date(tday) - new Date(actual);
+                    const diffinMSchallenger = new Date(tday) - new Date(challenger);
+                    console.log(actual, tday, challenger, diffinMSactual, diffinMSchallenger)
+                    if(diffinMSactual < 0){
+                      if(diffinMSchallenger >= 0) {
+                        this.nextTODO = {
+                          description: data["description"]["value"],
+                          dates: data["startDate"]["date"],
+                          location: data["location"]["value"],
+                        }
+                      }
+                      else {
+                        this.nextTODO = null;
+                      }
+                    }
+                    /*if(diffinMSchallenger < diffinMSactual && diffinMSchallenger >= 0){
+                      this.nextTODO = {
+                        description: data["description"]["value"],
+                        dates: data["startDate"]["date"],
+                        location: data["location"]["value"],
+                      }
+                    }
                   }*/
                   if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
-
-                    this.todaysTODO.push({
-                      description: data["description"]["value"],
-                      location: data["location"]["value"],
-                      dates: data["startDate"]["date"]
-                    });
+                    this.pushTodaysTodoFromQuery(data);
                   }
                 }
               }
             }
-
-          })
+          });
     },
 
     showAddEventForm() {
@@ -307,31 +394,18 @@ export default {
       const today = new Date();
       for(let k in this.todos){
         const date_event = this.todos[k].dates;
-        let year = "";
-        let month = "";
-        let day = "";
-        for(let i = 0; i < 10; i++){
-          if(i < 4)
-            year += date_event[i];
-          if (i > 4 && i < 7)
-            month += date_event[i]
-          if(i > 7 && i < 10)
-            day += date_event[i];
-        }
-        const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
+        const dateFormat = this.fromJSONtoStringDate(date_event);
+        const dat = new Date(parseInt(dateFormat.year,10), parseInt(dateFormat.month, 10) - 1,  parseInt(dateFormat.day, 10));
+        dat.setHours(parseInt(dateFormat.hours,10), parseInt(dateFormat.minutes, 10));
         if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
-          this.tdays.push({
-            description: this.todos[k].description,
-            location: this.todos[k].location,
-            dates: this.todos[k].dates
-          })
+          this.tdays.push({description: this.todos[k].description, location: this.todos[k].location, dates: this.todos[k].dates});
         }
       }
       return tdays;
     }
   },
   created: function(){
-    this.test();
+    this.starter();
   },
   computed: {
     attributes() {
