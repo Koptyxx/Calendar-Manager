@@ -4,49 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Login, register working as they should + router still not working">
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="good date on the calendar + startint to display the rdv's of the day">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2021_14_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_12_2021_14_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskResponseConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskSaveConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskSaveDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/TaskController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskResponseConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskSaveConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskSaveDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/EventRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/EventRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.e9db9b59.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.e9db9b59.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
@@ -238,9 +213,9 @@
     <list>
       <item itemvalue="Application.JsonFunc" />
       <item itemvalue="Application.CalendarManager" />
+      <item itemvalue="Application.Event" />
       <item itemvalue="JUnit.FridayApplicationTests" />
       <item itemvalue="Spring Boot.FridayApplication" />
-      <item itemvalue="Application.Event" />
     </list>
     <recent_temporary>
       <list>
@@ -560,6 +535,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -16,10 +16,9 @@
         Files
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">New calendar</a><a class="dropdown-item" href="#">Load a calendar from
-          existing
-          file</a></li>
-        <li><a class="dropdown-item" href="#">Export my calendar</a></li>
+        <li><a class="dropdown-item"  v-on:click="showEvent">New calendar</a></li>
+        <li><a class="dropdown-item"  v-on:click="showEvent">Load a calendar from existing file</a></li>
+        <li><a class="dropdown-item"  v-on:click="showEvent">Export my calendar</a></li>
       </ul>
     </li>
     <li class="nav-item">
@@ -29,18 +28,54 @@
     </li>
   </ul>
   <div class="container">
+    <h2 class="text-decoration-underline text-danger">Next Event</h2>
     <div class="row">
-      <p>informations intelligente à propos du prochain rdv</p>
-      <div class="col">Date</div>
-      <div class="col">Heure</div>
-      <div class="col">Lieu</div>
-      <div class="col">Météo</div>
+      <div class="col">
+        <h4 class="text-decoration-underline">Description</h4>
+      </div>
+      <div class="col">
+        <h4 class="text-decoration-underline">Location</h4>
+      </div>
+      <div class="col">
+        <h4 class="text-decoration-underline">Heure</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6>{{this.nextTODO.description}}</h6>
+      </div>
+      <div class="col">
+        <h6>{{this.nextTODO.location}}</h6>
+      </div>
+      <div class="col">
+        <h6>{{this.nextTODO.dates}}</h6>
+      </div>
     </div>
     <div class="row">
       <h2 class="text-decoration-underline text-danger">Events of the day</h2>
-      <div v-for="todo in todaysTODO" :key="todo">
-        <h4>Description : {{todaysTODO[k].description}}</h4>
+      <div class="row">
+        <div class="col">
+          <h4 class="text-decoration-underline">Description</h4>
+        </div>
+        <div class="col">
+          <h4 class="text-decoration-underline">Location</h4>
+        </div>
+        <div class="col">
+          <h4 class="text-decoration-underline">Heure</h4>
+        </div>
       </div>
+      <div class="row mt-4 mb-2" v-for="todo in todaysTODO" :key="todo">
+        <div class="col">
+          <h6>{{todo.description}}</h6>
+        </div>
+        <div class="col">
+          <h6>{{todo.location}}</h6>
+        </div>
+        <div class="col">
+          <h6>{{todo.dates}}</h6>
+        </div>
+      </div>
+
     </div>
   </div>
   <h2 class="text-decoration-underline text-danger">My Calendar</h2>
@@ -96,6 +131,7 @@ export default {
       incId: todos.length,
       todos,
       todaysTODO,
+      nextTODO: undefined,
       username: JSON.parse(localStorage.getItem('user')),
       isAllDay: false,
       mode: "dateTime",
@@ -112,7 +148,7 @@ export default {
       console.log(this.todaysTODO);
     },
     showEvent(){
-      console.log("Nouvel Event : \n Descritpion : " + this.description + "\nLocation : " + this.location + "\n Date : " + this.date);
+      console.log("hey je veux faire ça !")
     },
 
     addEvent() {
@@ -178,40 +214,86 @@ export default {
       fetch(url)
           .then(res => res.json())
           .then(res => {
-            const datas = res[0].calendar;
-            for(let k in datas["components"]){
-              const data = datas["components"][k]
-              if(data["name"] === "VEVENT"){
+            for(let i in res){
+              const datas = res[i].calendar;
+              for(let k in datas["components"]){
+                const data = datas["components"][k]
 
-                this.todos.push({
-                  description: data["description"]["value"],
-                  dates: data["startDate"]["date"],
-                  location: data["location"]["value"],
-                });
-
-                const today = new Date();
-                const date_event = data["startDate"]["date"];
-                let year = "";
-                let month = "";
-                let day = "";
-                for(let i = 0; i < 10; i++){
-                  if(i < 4)
-                    year += date_event[i];
-                  if (i > 4 && i < 7)
-                    month += date_event[i]
-                  if(i > 7 && i < 10)
-                    day += date_event[i];
-                }
-                const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
-                if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
-                  this.todaysTODO.push({
+                if(data["name"] === "VEVENT"){
+                  this.todos.push({
                     description: data["description"]["value"],
+                    dates: data["startDate"]["date"],
                     location: data["location"]["value"],
-                    dates: data["startDate"]["date"]
                   });
+
+                  const today = new Date();
+                  const date_event = data["startDate"]["date"];
+                  let year = "";
+                  let month = "";
+                  let day = "";
+                  let hours = "";
+                  let minutes = "";
+                  for(let i = 0; i < 16; i++){
+                    if(i < 4)
+                      year += date_event[i];
+                    if (i > 4 && i < 7)
+                      month += date_event[i]
+                    if(i > 7 && i < 10)
+                      day += date_event[i];
+                    if(i > 10 && i < 13)
+                      hours += date_event[i];
+                    if(i > 13 && i < 16)
+                      minutes += date_event[i];
+                  }
+                  const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
+                  dat.setHours(parseInt(hours,10), parseInt(minutes, 10));
+
+                  if(this.nextTODO === undefined){
+                    this.nextTODO = {
+                      description: data["description"]["value"],
+                      dates: data["startDate"]["date"],
+                      location: data["location"]["value"],
+                    }
+                  }
+                  /*else{
+                    let year = "";
+                    let month = "";
+                    let day = "";
+                    let hours = "";
+                    let minutes = "";
+                    for(let i = 0; i < 16; i++){
+                      if(i < 4)
+                        year += this.nextTODO.dates[i];
+                      if (i > 4 && i < 7)
+                        month += this.nextTODO.dates[i];
+                      if(i > 7 && i < 10)
+                        day += this.nextTODO.dates[i];
+                      if(i > 10 && i < 13)
+                        hours += this.nextTODO.dates[i];
+                      if(i > 13 && i < 16)
+                        minutes += this.nextTODO.dates[i];
+                    }
+                    const next = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
+                    next.setHours(parseInt(hours,10), parseInt(minutes, 10));
+                    /*const tday = new Date();
+                     const addtday = this.millitday.getFullYear() + tday.getMonth() + tday.getDate() + tday.getHours() + tday.getMinutes();
+                     const addnext = next.getFullYear() + next.getMonth() + next.getDate() + next.getHours() + next.getMinutes();
+                     const adddat = dat.getFullYear() + dat.getMonth() + dat.getDate() + dat.getHours() + dat.getMinutes();
+
+
+                  }*/
+                  if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
+
+                    this.todaysTODO.push({
+                      description: data["description"]["value"],
+                      location: data["location"]["value"],
+                      dates: data["startDate"]["date"]
+                    });
+                  }
                 }
               }
             }
+
           })
     },
 
@@ -228,12 +310,12 @@ export default {
         let month = "";
         let day = "";
         for(let i = 0; i < 10; i++){
-            if(i < 4)
-              year += date_event[i];
-            if (i > 4 && i < 7)
-              month += date_event[i]
-            if(i > 7 && i < 10)
-              day += date_event[i];
+          if(i < 4)
+            year += date_event[i];
+          if (i > 4 && i < 7)
+            month += date_event[i]
+          if(i > 7 && i < 10)
+            day += date_event[i];
         }
         const dat = new Date(parseInt(year,10), parseInt(month, 10) - 1,  parseInt(day, 10));
         if(dat.getMonth() === today.getMonth() && dat.getFullYear() === today.getFullYear() && dat.getDate() === today.getDate()){
