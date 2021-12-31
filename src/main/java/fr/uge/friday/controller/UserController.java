@@ -5,7 +5,7 @@ import fr.uge.friday.converter.UserSaveConverter;
 import fr.uge.friday.dto.UserResponseDTO;
 import fr.uge.friday.dto.UserSaveDTO;
 import fr.uge.friday.entity.User;
-import fr.uge.friday.repository.TaskRepository;
+import fr.uge.friday.repository.EventRepository;
 import fr.uge.friday.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,13 +19,13 @@ public class UserController {
     private final UserRepository userRepository;
     private final UserResponseConverter userResponseConverter;
     private final UserSaveConverter userSaveConverter;
-    private final TaskRepository taskRepository;
+    private final EventRepository eventRepository;
 
-    private UserController(UserRepository userRepository, TaskRepository taskRepository, UserResponseConverter userResponseConverter, UserSaveConverter userSaveConverter) {
+    private UserController(UserRepository userRepository, EventRepository eventRepository, UserResponseConverter userResponseConverter, UserSaveConverter userSaveConverter) {
         this.userRepository = userRepository;
         this.userResponseConverter = userResponseConverter;
         this.userSaveConverter = userSaveConverter;
-        this.taskRepository = taskRepository;
+        this.eventRepository = eventRepository;
     }
 
     @GetMapping("/findAll")
@@ -68,7 +68,7 @@ public class UserController {
     public ResponseEntity<Void> deleteUserByUsername(@PathVariable String username){
 
         var user = userRepository.findUserByUsernameEquals(username);
-        user.ifPresent(taskRepository::deleteTasksByUser);
+        user.ifPresent(eventRepository::deleteEventsByUser);
         userRepository.deleteUserByUsername(username);
         return ResponseEntity.noContent().build();
     }

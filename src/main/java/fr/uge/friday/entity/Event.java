@@ -21,7 +21,7 @@ public class Event {
     @Column(name = "id_Cal", nullable = false, unique = true)
     private UUID idCal;
 
-    @Column(name = "calendar", nullable = false)
+    @Column(name = "calendar", nullable = false, length = 40000)
     private Calendar calendar;
 
     @ManyToOne
@@ -30,6 +30,15 @@ public class Event {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private User user;
 
+    private static DateTime endDateTimeAllDay(String s) throws ParseException {
+        var sb = new StringBuilder();
+        for (int i = 0; i < s.length() - 6; i++) {
+            sb.append(s.charAt(i));
+        }
+        sb.append("235959");
+        return new DateTime(sb.toString());
+    }
+
     public void addEvent(String description, String location, String start, boolean isAllDay) throws URISyntaxException, ParseException {
         Objects.requireNonNull(description);
         Objects.requireNonNull(location);
@@ -37,7 +46,11 @@ public class Event {
 
         VEvent event;
 
-        event = new VEvent(new DateTime(start), description);
+        if (isAllDay)
+            event = new VEvent(new DateTime(start), endDateTimeAllDay(start), description);
+        else
+            event = new VEvent(new DateTime(start), description);
+
         event.getProperties().add(new Location(location));
         event.getProperties().add(new Description(description));
         event.getProperties().add(new Organizer(user.getName()));
@@ -71,4 +84,5 @@ public class Event {
     public User getUser() {
         return user;
     }
+
 }

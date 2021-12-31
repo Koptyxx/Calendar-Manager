@@ -5,7 +5,6 @@ import fr.uge.friday.entity.Event;
 import fr.uge.friday.repository.EventRepository;
 import fr.uge.friday.repository.UserRepository;
 import org.springframework.stereotype.Component;
-
 import java.net.URISyntaxException;
 import java.text.ParseException;
 

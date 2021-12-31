@@ -121,12 +121,10 @@
                 .then(res => {
                     if (res.status === 200){
                         this.resetData();
-                        router.go(1);
                         router.push("calendar");
                     }
                     else if(res.status === 404){
                         alert("You have entered an invalid username or password.")
-                        router.push("login");
                     }
                 })
             },
