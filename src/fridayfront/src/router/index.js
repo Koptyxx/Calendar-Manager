@@ -1,5 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Login from '../components/FridayLogin'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Register from '../components/FridayRegistration'
 import Calendar from '../components/CalendarManager'
 import Home from '../views/Home'
@@ -14,7 +13,7 @@ const routes = [
     {
         path: '/login',
         name: 'Login',
-        component: Login
+        component: () => import('../components/FridayLogin')
     },
     {
         path: '/register',
@@ -30,7 +29,7 @@ const routes = [
 
 const router = createRouter({
 
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHashHistory(),
     routes
 })
 

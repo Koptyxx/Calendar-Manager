@@ -190,6 +190,8 @@ export default {
             }
           })
 
+        console.log(this.username);
+
     },
 
     showAddEventForm() {

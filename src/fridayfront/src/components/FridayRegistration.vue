@@ -15,7 +15,6 @@
                   <a
                       class="nav-link text-primary"
                       id="tab-login"
-                      href="/login"
                       role="tab"
                       aria-selected="false"
                   >Login
@@ -27,7 +26,6 @@
                         <router-link to="/register" class="text-primary">
                           <a class="nav-link active"
                              id="tab-register"
-                             href="#"
                              role="tab"
                              aria-selected="true"
                           >Register
@@ -50,7 +48,7 @@
                     <label class="form-label">Password</label>
                     <input id="pass" :type="passwordFieldType" class="form-control" placeholder="Password" v-model="password"/>
                     <input type="checkbox" @click="showPassword">
-                    <label>Show Password</label>
+                    <label> Show Password</label>
                 </div>
 
                 <div class="form-outline mb-4 text-center">
@@ -97,6 +95,12 @@
                 return this.passwords_error = this.confirmed_password !== this.password;
             },
 
+            resetData: function () {
+                this.username = '';
+                this.password = '';
+                this.confirmed_password = '';
+            },
+
             addUser(){
 
                 let pass = document.getElementById("pass");
@@ -108,11 +112,9 @@
 
                     if (pass.value !== repeat.value){
                         alert("Passwords are not the same, please check them");
-                        router.push('/Register');
                     }
                     else if (response.status === 404){
                         alert("Username is already used, please chose another one");
-                        router.push('/Register');
                     }
                     else if (response.status === 200){
                         fetch('http://localhost:8080/user/save', {
@@ -126,8 +128,8 @@
                                 password: this.password
                             })
                         })
+                        this.resetData();
                         router.push("Calendar");
-
                     }
                 })
             }

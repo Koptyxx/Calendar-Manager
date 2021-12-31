@@ -17,4 +17,7 @@ public interface EventRepository extends JpaRepository<Event, UUID> {
 
     @Transactional
     void deleteEventByIdCal(UUID id);
+
+    @Transactional
+    void deleteEventsByUser(User user);
 }

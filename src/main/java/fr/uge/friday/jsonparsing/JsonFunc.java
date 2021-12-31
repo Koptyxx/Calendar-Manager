@@ -2,13 +2,10 @@ package fr.uge.friday.jsonparsing;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fr.uge.friday.entity.Task;
 import fr.uge.friday.entity.User;
-import fr.uge.friday.repository.TaskRepository;
 import fr.uge.friday.repository.UserRepository;
 
 import java.io.IOException;
-import java.util.Date;
 
 public class JsonFunc {
 
@@ -34,27 +31,6 @@ public class JsonFunc {
                 username = root.path("username").asText();
                 password = root.path("password").asText();
                 userRepository.save(new User(username, password));
-            }
-        }
-    }
-
-    public static void addTaskWithJsonFile(UserRepository userRepository, TaskRepository taskRepository, String src) throws IOException {
-        for(JsonNode root : parse(src)){
-
-            var getDesc = root.get("description");
-            var getLoc = root.get("location");
-            var getUser = root.get("username");
-            String description;
-            String location;
-            String username;
-
-            if(getDesc != null && getLoc != null && getUser != null){
-                description = root.path("description").asText();
-                location = root.path("location").asText();
-                username = root.path("username").asText();
-                var user = userRepository.findUserByUsernameEquals(username);
-                user.ifPresent(value -> taskRepository.save(new Task(new Date(), description, location, value)));
-                System.out.println(description + " " + location);
             }
         }
     }

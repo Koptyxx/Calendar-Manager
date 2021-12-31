@@ -4,25 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="user controller changes">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="5d225c93-bd8d-47ac-b559-3da67018d204" name="Changes" comment="Login, register working as they should + router still not working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db.script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/CalendarManager.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayLogin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/components/FridayRegistration.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fridayfront/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/FridayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/Insertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/TaskController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/EventSaveConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskResponseConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/converter/TaskSaveConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/dto/TaskSaveDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/entity/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/jsonparsing/JsonFunc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/friday/repository/TaskRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/FridayApp.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/FridayApp.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/FridayApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/Insertions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/TaskController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/EventSaveConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskResponseConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/converter/TaskSaveConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskResponseDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/dto/TaskSaveDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/entity/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/jsonparsing/JsonFunc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/EventRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/EventRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uge/friday/repository/TaskRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.5cf0a48c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.5cf0a48c.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.uge.friday.FridayApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.uge.friday.FridayApplicationTests.txt" afterDir="false" />
     </list>
@@ -154,12 +178,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.jsonparsing.JsonFunc" />
+    <configuration name="Event" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.entity.Event" />
       <module name="Friday" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.uge.friday.jsonparsing.*" />
+          <option name="PATTERN" value="fr.uge.friday.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,12 +191,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lecodedubg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.lecodedubg" />
+    <configuration name="JsonFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.uge.friday.jsonparsing.JsonFunc" />
       <module name="Friday" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.uge.friday.*" />
+          <option name="PATTERN" value="fr.uge.friday.jsonparsing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -212,19 +236,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.lecodedubg" />
       <item itemvalue="Application.JsonFunc" />
       <item itemvalue="Application.CalendarManager" />
       <item itemvalue="JUnit.FridayApplicationTests" />
       <item itemvalue="Spring Boot.FridayApplication" />
+      <item itemvalue="Application.Event" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FridayApplication" />
+        <item itemvalue="Application.Event" />
         <item itemvalue="Application.CalendarManager" />
         <item itemvalue="JUnit.FridayApplicationTests" />
         <item itemvalue="Application.JsonFunc" />
-        <item itemvalue="Application.lecodedubg" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +328,8 @@
       <workItem from="1640626381369" duration="1006000" />
       <workItem from="1640870838732" duration="591000" />
       <workItem from="1640887011233" duration="18000" />
-      <workItem from="1640887056939" duration="308000" />
+      <workItem from="1640887056939" duration="666000" />
+      <workItem from="1640905175214" duration="6804000" />
     </task>
     <task id="LOCAL-00001" summary="clean project">
       <created>1635005154205</created>
@@ -411,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640873599678</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Login, register working as they should + router still not working">
+      <created>1640887692627</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640887692627</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +581,8 @@
     <MESSAGE value="bug on Event table insertions fixed" />
     <MESSAGE value="work on router not successful + more changes on add event methods" />
     <MESSAGE value="user controller changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="user controller changes" />
+    <MESSAGE value="Login, register working as they should + router still not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login, register working as they should + router still not working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Friday$SpringDataJpaApplication.ic" NAME="SpringDataJpaApplication Coverage Results" MODIFIED="1635778286106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
